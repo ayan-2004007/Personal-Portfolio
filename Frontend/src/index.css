@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Sohne-Breit';
+    src: url('../public/Fonts/TestSöhneBreit-Buch.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-sohne{
+    font-family: 'Sohne-Breit', sans-serif;
+    word-spacing: 2px;
+}
