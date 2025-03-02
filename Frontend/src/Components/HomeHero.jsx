@@ -10,7 +10,7 @@ import github from "../Assets/github.png"
 
 const HomeHero = () => {
     const textRef = useRef(null)
-    const headRef =useRef(null)
+    const headRef = useRef(null)
 
     useGSAP(() => {
         if (textRef.current) {
@@ -22,7 +22,7 @@ const HomeHero = () => {
                 delay: 0.3
             });
         }
-    
+
         if (headRef.current) {
             gsap.from(headRef.current, {
                 duration: 2,
@@ -32,12 +32,12 @@ const HomeHero = () => {
                 delay: 0.5
             });
         }
-    }, { scope: textRef }); 
-    
+    }, { scope: textRef });
+
 
     return (
         <>
-            <div className="flex flex-col w-full h-screen">
+            <div className="flex flex-col w-full h-screen gap-8">
                 <Navbar />
                 <div className="flex flex-col gap-10 px-2">
                     <div className="flex w-full items-start gap-0 lg:gap-2 justify-center px-4">
@@ -52,37 +52,39 @@ const HomeHero = () => {
                     </div>
 
 
- 
+
 
 
 
                     <div className="relative w-full h-full flex rounded-[30px]">
-                        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-[500px] object-cover rounded-[30px]">
+                        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-[530px] object-cover rounded-[30px]">
                             <source src={bg} type="video/mp4" />
                         </video>
 
-                        <div className="relative z-10 w-full">
-                            <div className="flex flex-col items-start">
-                                <div className="flex gap-2">
-                                    <img src={insta} alt="" className="h-[30px] w-[30px]" />
-                                    <img src={linkedin} alt="" className="h-[30px] w-[30px]" />
-                                    <img src={github} alt="" className="h-[30px] w-[30px]" />
-                                </div>
-                                <div className="flex gap-1 text-white text-base">
-                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold">Full Stack Developer</div>
-                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold">Ui/UX</div>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-col text-white overflow-x-hidden w-full">
-                                <div className="flex flex-col">
-                                    <div className="flex items-baseline w-full">
-                                        <p className="font-sohne text-lg font-bold">Building Scalable Web Solutions</p>
-                                        <div className="h-[2px] bg-white w-full"></div>
+                        <div className="relative z-10 w-full px-1">
+                            <div className=" flex flex-col gap-10 h-[530px] justify-between pt-9 pb-2">
+                                <div className="flex flex-col items-start px-6 gap-6 lg:flex-row lg:justify-between">
+                                    <div className="flex gap-2">
+                                        <img src={insta} alt="" className="h-[30px] w-[30px] lg:w-[36px] lg:h-[36px]" />
+                                        <img src={linkedin} alt="" className="h-[30px] w-[30px] lg:w-[36px] lg:h-[36px]" />
+                                        <img src={github} alt="" className="h-[30px] w-[30px] lg:w-[36px] lg:h-[36px]" />
                                     </div>
-                                    <h1 ref={headRef} className="font-sohne text-[72px] font-black tracking-tight break-all ">Developer</h1>
+                                    <div className="flex gap-1 text-white text-base">
+                                        <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg">Full Stack Developer</div>
+                                        <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg">Ui/UX</div>
+                                    </div>
                                 </div>
-                                <p className="font-sohne text-[11px] font-bold">©2025 | AYAN CHAKRABORTY</p>
+
+                                <div className="flex flex-col text-white w-full gap-8">
+                                    <div className="flex flex-col">
+                                        <div className="flex items-baseline w-full">
+                                            <p className="font-sohne text-lg font-bold lg:text-lg lg:font-semibold">Building Scalable Web Solutions</p>
+                                            <div className="h-[2px] bg-white w-full"></div>
+                                        </div>
+                                        <h1 ref={headRef} className="font-sohne text-[74px] font-black tracking-tight break-all sm:text-[118px] lg:text-[176px]">Developer</h1>
+                                    </div>
+                                    <p className="font-sohne text-[11px] font-bold text-center">©2025 | AYAN CHAKRABORTY</p>
+                                </div> 
                             </div>
                         </div>
                     </div>
