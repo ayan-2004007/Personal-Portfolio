@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import Navbar from '../Components/Navbar'
 import Cursor from '../Components/Cursor'
-import { gsap } from "gsap";
+import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import bg from "../Assets/holomorph.mp4"
 import insta from "../Assets/insta.png"
@@ -13,7 +13,7 @@ const HomeHero = () => {
     const textRef = useRef(null)
     const headRef = useRef(null)
     const lineRef = useRef(null)
-    const cursorRef = useRef(null)
+    const iconRef=useRef(null)
 
     useGSAP(() => {
         if (textRef.current) {
@@ -22,30 +22,36 @@ const HomeHero = () => {
                 y: "110%",
                 ease: "power4.out",
                 delay: 0.5
-            });
+            })
         }
         gsap.fromTo(
             lineRef.current,
             { width: "0%" },
             { width: "100%", duration: 2, ease: "cubic-bezier(0.41, 0.01, 0.17, 0.99)", delay: 0.5 }
-        );
-
+        )
         if (headRef.current) {
             gsap.from(headRef.current, {
                 duration: 2,
                 y: "100%",
                 ease: "power4.out",
                 delay: 3
-            });
+            })
         }
-    }, { scope: textRef });
-
-
+        if (iconRef.current) {
+            gsap.from(iconRef.current, {
+                duration: 2,
+                y: "-100%",
+                ease: "power4.out",
+                opacity:0,
+                delay: 3
+            })
+        }
+    })
 
     return (
         <>
             <div className="flex flex-col w-full h-screen gap-10 xl:gap-0 xl:justify-between lg:pb-4">
-                <Cursor ref={cursorRef} />
+                <Cursor />
                 <Navbar />
                 <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">
                     <div className="overflow-hidden">
@@ -57,11 +63,6 @@ const HomeHero = () => {
                         (01)
                     </p>
                 </div>
-
-
-
-
-
                 <div className="px-2 xl:px-4 w-full h-full lg:h-[530px] 2xl:h-[580px]">
                     <div className="relative w-full h-full flex rounded-[30px]">
                         <video ref={lineRef} autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-[508px] object-cover object-center rounded-[30px] lg:h-[530px] 2xl:h-[580px]">
@@ -71,13 +72,13 @@ const HomeHero = () => {
                         <div className="relative z-10 w-full">
                             <div className=" flex flex-col gap-10 h-[508px] justify-between pt-9 pb-2 lg:h-[530px] 2xl:h-[580px]">
                                 <div className="flex flex-col items-start px-6 gap-6 lg:flex-row lg:justify-between">
-                                    <div className="flex gap-2">
+                                    <div className="flex gap-2" ref={iconRef}>
                                         <img src={insta} alt="" className="h-[30px] w-[30px] lg:w-[36px] lg:h-[36px]" />
                                         <img src={linkedin} alt="" className="h-[30px] w-[30px] lg:w-[36px] lg:h-[36px]" />
                                         <img src={github} alt="" className="h-[30px] w-[30px] lg:w-[36px] lg:h-[36px]" />
                                     </div>
                                     <div className="flex gap-1 text-white text-base">
-                                        <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl" onMouseLeave={()=>gsap.to("#cursor",{ scale:1,duration:0.5})} onMouseEnter={()=>gsap.to("#cursor",{ scale:8, duration:0.5,})}>Full Stack Developer</div>
+                                        <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">Full Stack Developer</div>
                                         <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">Ui/UX</div>
                                     </div>
                                 </div>

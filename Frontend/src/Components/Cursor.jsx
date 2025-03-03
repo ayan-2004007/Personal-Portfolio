@@ -1,30 +1,30 @@
-import React, { useEffect, forwardRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-const Cursor = forwardRef((props, ref) => {  // Accept props and ref
+const Cursor = (() => {  
+    const cursorRef=useRef(null)
     useEffect(() => {
-        if (!ref || !ref.current) return;
-
         const handleMouseMove = (e) => {
-            gsap.to(ref.current, {
+            gsap.to(cursorRef.current, {
                 x: e.clientX - 10,
                 y: e.clientY - 10,
-                duration: 0.3,
-                ease: "power2.out",
+                duration: 0.5,
+                delay:0.1,
+                ease: "power4.out",
             });
         };
 
         window.addEventListener("mousemove", handleMouseMove);
         return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, [ref]);
+    }, [cursorRef]);
 
     return (
         <div
-            id="cursor"
-            ref={ref} // Forward ref properly
-            className="fixed top-0 left-0 h-[20px] w-[20px] bg-[#121212] rounded-full z-20 pointer-events-none"
+            ref={cursorRef} 
+            className="hidden xl:block fixed top-0 left-0 h-[40px] w-[40px] border-2 border-[#212121] rounded-full z-20 pointer-events-none"
         ></div>
     );
 });
+
 
 export default Cursor;
