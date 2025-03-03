@@ -6,8 +6,8 @@ const Cursor = (() => {
     useEffect(() => {
         const handleMouseMove = (e) => {
             gsap.to(cursorRef.current, {
-                x: e.clientX - 10,
-                y: e.clientY - 10,
+                x: e.clientX-40/2,
+                y: e.clientY-40/2,
                 duration: 0.5,
                 delay:0.1,
                 ease: "power4.out",

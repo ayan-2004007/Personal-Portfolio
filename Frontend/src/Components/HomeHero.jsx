@@ -12,20 +12,20 @@ import github from "../Assets/github.png"
 const HomeHero = () => {
     const textRef = useRef(null)
     const headRef = useRef(null)
-    const lineRef = useRef(null)
+    const videoRef = useRef(null)
     const iconRef=useRef(null)
 
     useGSAP(() => {
         if (textRef.current) {
             gsap.from(textRef.current, {
-                duration: 3,
+                duration: 2,
                 y: "110%",
                 ease: "power4.out",
-                delay: 0.5
+                delay: 3
             })
         }
         gsap.fromTo(
-            lineRef.current,
+            videoRef.current,
             { width: "0%" },
             { width: "100%", duration: 2, ease: "cubic-bezier(0.41, 0.01, 0.17, 0.99)", delay: 0.5 }
         )
@@ -65,7 +65,7 @@ const HomeHero = () => {
                 </div>
                 <div className="px-2 xl:px-4 w-full h-full lg:h-[530px] 2xl:h-[580px]">
                     <div className="relative w-full h-full flex rounded-[30px]">
-                        <video ref={lineRef} autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-[508px] object-cover object-center rounded-[30px] lg:h-[530px] 2xl:h-[580px]">
+                        <video ref={videoRef} autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-[508px] object-cover object-center rounded-[30px] lg:h-[530px] 2xl:h-[580px]">
                             <source src={bg} type="video/mp4" />
                         </video>
 
@@ -90,7 +90,8 @@ const HomeHero = () => {
                                             <div className="h-[2px] bg-white w-full"></div>
                                         </div>
                                         <div className="overflow-y-hidden">
-                                            <h1 ref={headRef} className="font-sohne text-[74px] font-black tracking-tight break-all sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-y-hidden">Developer</h1>
+                                            <h1 ref={headRef} className="font-sohne text-[74px] font-black tracking-tight break-all sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-y-hidden"
+                                            >Developer</h1>
                                         </div>
 
                                     </div>
