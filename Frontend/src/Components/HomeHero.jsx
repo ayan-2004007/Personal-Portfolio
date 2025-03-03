@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef } from "react"
 import Navbar from '../Components/Navbar'
+import Cursor from '../Components/Cursor'
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@gsap/react"
 import bg from "../Assets/holomorph.mp4"
 import insta from "../Assets/insta.png"
 import linkedin from "../Assets/linkedin.png"
@@ -11,29 +12,30 @@ import github from "../Assets/github.png"
 const HomeHero = () => {
     const textRef = useRef(null)
     const headRef = useRef(null)
-    const lineRef=useRef(null)
+    const lineRef = useRef(null)
+    const cursorRef = useRef(null)
 
     useGSAP(() => {
         if (textRef.current) {
             gsap.from(textRef.current, {
                 duration: 3,
-                y: "100%",
+                y: "110%",
                 ease: "power4.out",
                 delay: 0.5
             });
         }
         gsap.fromTo(
             lineRef.current,
-            { width:"0%" },
-            { width:"100%", duration:2, ease:"cubic-bezier(0.41, 0.01, 0.17, 0.99)",delay:0.5 }
-          );
+            { width: "0%" },
+            { width: "100%", duration: 2, ease: "cubic-bezier(0.41, 0.01, 0.17, 0.99)", delay: 0.5 }
+        );
 
         if (headRef.current) {
             gsap.from(headRef.current, {
                 duration: 2,
                 y: "100%",
                 ease: "power4.out",
-                delay: 2.5
+                delay: 3
             });
         }
     }, { scope: textRef });
@@ -43,6 +45,7 @@ const HomeHero = () => {
     return (
         <>
             <div className="flex flex-col w-full h-screen gap-10 xl:gap-0 xl:justify-between lg:pb-4">
+                <Cursor ref={cursorRef} />
                 <Navbar />
                 <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">
                     <div className="overflow-hidden">
@@ -74,7 +77,7 @@ const HomeHero = () => {
                                         <img src={github} alt="" className="h-[30px] w-[30px] lg:w-[36px] lg:h-[36px]" />
                                     </div>
                                     <div className="flex gap-1 text-white text-base">
-                                        <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">Full Stack Developer</div>
+                                        <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl" onMouseLeave={()=>gsap.to("#cursor",{ scale:1,duration:0.5})} onMouseEnter={()=>gsap.to("#cursor",{ scale:8, duration:0.5,})}>Full Stack Developer</div>
                                         <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">Ui/UX</div>
                                     </div>
                                 </div>
@@ -86,9 +89,9 @@ const HomeHero = () => {
                                             <div className="h-[2px] bg-white w-full"></div>
                                         </div>
                                         <div className="overflow-y-hidden">
-                                        <h1 ref={headRef} className="font-sohne text-[74px] font-black tracking-tight break-all sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-y-hidden">Developer</h1>
+                                            <h1 ref={headRef} className="font-sohne text-[74px] font-black tracking-tight break-all sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-y-hidden">Developer</h1>
                                         </div>
-                                        
+
                                     </div>
                                     <p className="font-sohne text-[11px] font-bold text-center xl:text-right xl:text-sm xl:mr-5">©2025 | AYAN CHAKRABORTY</p>
                                 </div>

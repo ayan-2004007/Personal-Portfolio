@@ -41,8 +41,6 @@ const Navbar = () => {
                                 className="h-[45px] w-[45px] xl:w-[48px] xl:h-[48px] transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] transform group-hover:-translate-x-[150px]"
                             />
                         </button>
-
-
                     </div>
                 </div>
             </div>

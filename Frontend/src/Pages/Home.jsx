@@ -4,10 +4,10 @@ import HomeHero from "../Components/HomeHero"
 const Home=()=>{
     return(
         <>
-            <div>
+            <body>
                 {/* <Navbar/> */}
                 <HomeHero/>
-            </div>
+            </body>
         </>
     )
 }

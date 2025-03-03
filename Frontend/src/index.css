@@ -11,3 +11,6 @@
     font-family: 'Sohne-Breit', sans-serif;
     word-spacing: 2px;
 }
+body{
+    cursor: default;
+}
