@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Navbar from '../Components/Navbar'
 import HomeHero from "../Components/HomeHero"
+import Works from "../Components/Works";
 
 gsap.registerPlugin(ScrollTrigger);
 const Home=()=>{
@@ -29,10 +30,8 @@ const Home=()=>{
     },[])
     return(
             <body>
-                {/* <Navbar/> */}
                 <HomeHero/>
-                <div className="w-full h-screen bg-red-200"></div>
-                <div className="w-full h-screen bg-green-200"></div>
+                <Works/>
 
             </body>
     )

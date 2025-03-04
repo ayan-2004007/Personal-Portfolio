@@ -89,7 +89,7 @@ const HomeHero = () => {
                                             <p className="font-sohne text-lg font-bold lg:text-lg lg:font-medium xl:text-xl 2xl:text-2xl ml-1 xl:max-w-[612px]">Building Scalable Web Solutions</p>
                                             <div className="h-[2px] bg-white w-full"></div>
                                         </div>
-                                        <div className="overflow-y-hidden">
+                                        <div className="overflow-x-hidden">
                                             <h1 ref={headRef} className="font-sohne text-[74px] font-black tracking-tight break-all sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-y-hidden"
                                             >Developer</h1>
                                         </div>
