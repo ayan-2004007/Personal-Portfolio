@@ -8,7 +8,6 @@ import insta from "../Assets/insta.png"
 import linkedin from "../Assets/linkedin.png"
 import github from "../Assets/github.png"
 
-
 const HomeHero = () => {
     const textRef = useRef(null)
     const headRef = useRef(null)
@@ -34,7 +33,8 @@ const HomeHero = () => {
                 duration: 2,
                 y: "100%",
                 ease: "power4.out",
-                delay: 3
+                delay: 3,
+                toggleActions: "play none play reverse"
             })
         }
         if (iconRef.current) {
