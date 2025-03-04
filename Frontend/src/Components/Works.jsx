@@ -3,6 +3,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import arrow from "../Assets/direction.png";
+import arr_dwn from "../Assets/arrow_dwn.png"
+
+import p1 from "../Assets/psd01.png"
+import p2 from "../Assets/psd02.png"
+import p3 from "../Assets/psd03.png"
+import p4 from "../Assets/psd04.png"
+import p5 from "../Assets/psd05.png"
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -14,7 +21,7 @@ const Works = () => {
 
     useGSAP(() => {
         const container = containerRef.current;
-        const sections = gsap.utils.toArray(".projects");
+        // const sections = gsap.utils.toArray(".projects");
 
         if (headRef.current) {
             gsap.from(headRef.current, {
@@ -23,9 +30,9 @@ const Works = () => {
                 ease: "power4.out",
                 scrollTrigger: {
                     trigger: headRef.current,
-                    start: "top 70%",
+                    start: "top 80%",
                     toggleActions: "play none play reverse",
-                    
+
                 },
             })
         }
@@ -47,17 +54,17 @@ const Works = () => {
             )
         }
         gsap.to(container, {
-            xPercent: -100 * (sections.length - 1),
+            x: () => -1 * (container.scrollWidth - window.innerWidth),
             ease: "none",
             scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "top top",
-                end:()=>`+=${window.innerWidth*(sections.length-1)}`,
+                end: () => `+=${container.scrollWidth - window.innerWidth}`,
                 pin: true,
                 scrub: 1,
-                
             },
         })
+        
     }, [])
 
     return (
@@ -71,7 +78,7 @@ const Works = () => {
                             </div>
                             <p className="font-sohne text-[#121212] text-base xl:text-2xl uppercase font-bold ">(02)</p>
                         </div>
-                        <img src={arrow} alt="" className="h-[40px] w-[40px] md:h-[60px] md:w-[60px] lg:h-[80px] lg:w-[80px] xl:w-[100px] xl:h-[100px]"/>
+                        <img src={arrow} alt="" className="h-[40px] w-[40px] md:h-[60px] md:w-[60px] lg:h-[80px] lg:w-[80px] xl:w-[100px] xl:h-[100px]" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <p className="uppercase px-3 font-sohne font-semibold text-[#121212] text-[10px] leading-[15px] max-w-[374px] mx-auto md:text-[12px] md:leading-[19px] md:max-w-[450px] lg:leading-[19px] lg:max-w-[524px] lg:mr-14 xl:mr-0 xl:px-0 xl:text-sm xl:leading-[20px] xl:max-w-[595px]">
@@ -85,11 +92,47 @@ const Works = () => {
                 <hr ref={hrRef} className="hidden h-[2px] bg-[#393939] xl:flex" />
             </div>
 
-            <div ref={sectionRef} className="h-screen w-screen overflow-hidden">
-                <div ref={containerRef} className="flex">
-                    <div className="projects h-screen w-screen bg-red-200 shrink-0"></div>
-                    <div className="projects h-screen w-screen bg-green-200 shrink-0"></div>
-                    <div className="projects h-screen w-screen bg-blue-200 shrink-0"></div>
+            <div ref={sectionRef} className="h-screen w-screen overflow-hidden xl:w-auto">
+                <div ref={containerRef} className="flex xl:gap-12">
+                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                        <div className="flex flex-col items-center gap-8">
+                            <img src={p1} alt="" className="w-[380px] rounded-[10px] md:w-[524px] lg:w-[656px]" />
+                            <img src={arr_dwn} alt="" className="h-[75px] w-[30px]" />
+                            <p className="font-sohne text-black text-sm px-5 uppercase font-semibold max-w-[374px] mx-auto md:max-w-[450px] md:leading-[19px] lg:text-base lg:max-w-[560px] lg:leading-[24px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                        </div>
+                    </div>
+
+                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                        <div className="flex flex-col-reverse items-center gap-8">
+                            <img src={p2} alt="" className="w-[380px] rounded-[10px] md:w-[524px] lg:w-[656px]" />
+                            <img src={arr_dwn} alt="" className="h-[75px] w-[30px]" />
+                            <p className="font-sohne text-black text-sm px-5 uppercase font-semibold max-w-[374px] mx-auto md:max-w-[450px] md:leading-[19px] lg:text-base lg:max-w-[560px] lg:leading-[24px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                        </div>
+                    </div>
+
+                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                        <div className="flex flex-col items-center gap-8">
+                            <img src={p3} alt="" className="w-[380px] rounded-[10px] md:w-[524px] lg:w-[656px]" />
+                            <img src={arr_dwn} alt="" className="h-[75px] w-[30px]" />
+                            <p className="font-sohne text-black text-sm px-5 uppercase font-semibold max-w-[374px] mx-auto md:max-w-[450px] md:leading-[19px] lg:text-base lg:max-w-[560px] lg:leading-[24px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                        </div>
+                    </div>
+
+                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                        <div className="flex flex-col-reverse items-center gap-8">
+                            <img src={p4} alt="" className="w-[380px] rounded-[10px] md:w-[524px] lg:w-[656px]" />
+                            <img src={arr_dwn} alt="" className="h-[75px] w-[30px]" />
+                            <p className="font-sohne text-black text-sm px-5 uppercase font-semibold max-w-[374px] mx-auto md:max-w-[450px] md:leading-[19px] lg:text-base lg:max-w-[560px] lg:leading-[24px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                        </div>
+                    </div>
+
+                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                        <div className="flex flex-col items-center gap-8">
+                            <img src={p5} alt="" className="w-[380px] rounded-[10px] md:w-[524px] lg:w-[656px]" />
+                            <img src={arr_dwn} alt="" className="h-[75px] w-[30px]" />
+                            <p className="font-sohne text-black text-sm px-5 uppercase font-semibold max-w-[374px] mx-auto md:max-w-[450px] md:leading-[19px] lg:text-base lg:max-w-[560px] lg:leading-[24px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="h-screen w-screen flex items-center justify-center bg-white text-4xl">
