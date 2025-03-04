@@ -8,13 +8,16 @@ import HomeHero from "../Components/HomeHero"
 import Works from "../Components/Works";
 
 gsap.registerPlugin(ScrollTrigger);
-const Home=()=>{
-    useEffect(()=>{
-        const lenis=new Lenis({
-            duration: 1,
-            easing: (t) =>  t * (2 - t),
-            smoothTouch: false,
-            inertia: 0.95,
+const Home = () => {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches
+    useEffect(() => {
+        const lenis = new Lenis({
+            duration: isMobile ? 1.5 : 1,
+            easing: isMobile
+                ? (t) => t * t * (3 - 2 * t) 
+                : (t) =>t * (2 - t),
+            smoothTouch: isMobile ? true : false,
+            inertia: isMobile ? 1 : 0.95,
             syncTouch: true,
         })
 
@@ -22,18 +25,20 @@ const Home=()=>{
             lenis.raf(time);
             ScrollTrigger.update();
             requestAnimationFrame(raf);
-          }
-          requestAnimationFrame(raf);
-          return () => {
+        }
+        requestAnimationFrame(raf);
+        return () => {
             lenis.destroy();
-          };
-    },[])
-    return(
-            <body>
-                <HomeHero/>
-                <Works/>
+        };
+    }, [])
+    return (
+        <body className="overflow-x-hidden flex flex-col gap-[156px]">
+            <div className="flex flex-col lg:gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
+            <HomeHero />
+            <Works />
+            </div>
 
-            </body>
+        </body>
     )
 }
 export default Home
