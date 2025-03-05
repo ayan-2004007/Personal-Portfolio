@@ -7,7 +7,7 @@ import Navbar from '../Components/Navbar'
 import HomeHero from "../Components/HomeHero"
 import Works from "../Components/Works";
 import ScaleH from "../Components/ScaleH";
-import Next from "../Components/Next";
+import Intro from "../Components/Intro";
 
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
@@ -40,8 +40,8 @@ const Home = () => {
             <Works />
             <div>
                 <ScaleH/>
+                {/* <Intro/> */}
             </div>
-            <Next/>
             </div>
 
         </body>
