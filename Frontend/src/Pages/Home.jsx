@@ -38,7 +38,9 @@ const Home = () => {
             <div className="flex flex-col lg:gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
             <HomeHero />
             <Works />
-            <ScaleH/>
+            <div>
+                <ScaleH/>
+            </div>
             <Next/>
             </div>
 

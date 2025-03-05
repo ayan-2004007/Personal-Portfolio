@@ -12,28 +12,30 @@ const ScaleH = () => {
     useGSAP(() => {
         gsap.fromTo(
             textRef.current,
-            { scale:0.2},
+            { scale:1},
             {
-                scale: 100,
-                ease: "power4.out",
+                scale: 25,
+                ease: "power1.out",
                 scrollTrigger: {
                     trigger: containerRef.current,
                     start: "top top",
-                    end: "+=1000%",
-                    scrub: true
+                    end: "+=100%",
+                    scrub: 1,
+                    pin:true
                 }
             }
         );
+
     }, []);
 
     return (
         <> 
-            <div ref={containerRef} className="h-screen w-full flex items-center justify-center relative z-0">
-                <h1 ref={textRef} className="font-sohne text-[256px] text-black font-black tracking-tighter relative z-0">
+            <div ref={containerRef} className="h-screen w-full flex items-center justify-center overflow-hidden">
+                <h1 ref={textRef} className="font-sohne text-[138px] lg:text-[176px] xl:text-[218px] 2xl:text-[276px] text-black font-extrabold ">
                     HEY
                 </h1>
             </div>
-            <div className="h-screen w-full bg-black text-white z-10">
+            <div className="h-screen w-full bg-black text-white -mt-40 relative z-10">
                 <h1>
                     hello
                 </h1>
