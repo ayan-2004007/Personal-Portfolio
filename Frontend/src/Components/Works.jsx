@@ -14,6 +14,7 @@ import p5 from "../Assets/psd05.png"
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Works = () => {
+    
     const containerRef = useRef(null);
     const sectionRef = useRef(null);
     const headRef = useRef(null)
@@ -134,9 +135,6 @@ const Works = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="h-screen w-screen flex items-center justify-center bg-white text-4xl">
-                Fuck You
             </div>
         </div>
     );

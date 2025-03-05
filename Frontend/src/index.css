@@ -6,11 +6,11 @@
     font-weight: normal;
     font-style: normal;
 }
-
-.font-sohne{
+.font-sohne {
     font-family: 'Sohne-Breit', sans-serif;
     word-spacing: 2px;
 }
-body{
+body {
     cursor: default;
+    margin: 0;
 }

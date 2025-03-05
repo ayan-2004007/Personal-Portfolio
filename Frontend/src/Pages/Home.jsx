@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from '../Components/Navbar'
 import HomeHero from "../Components/HomeHero"
 import Works from "../Components/Works";
+import ScaleH from "../Components/ScaleH";
+import Next from "../Components/Next";
 
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
@@ -36,6 +38,8 @@ const Home = () => {
             <div className="flex flex-col lg:gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
             <HomeHero />
             <Works />
+            <ScaleH/>
+            <Next/>
             </div>
 
         </body>
