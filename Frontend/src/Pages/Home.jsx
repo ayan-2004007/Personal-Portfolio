@@ -1,25 +1,25 @@
-import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react"
+import Lenis from "@studio-freight/lenis"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import Navbar from '../Components/Navbar'
 import HomeHero from "../Components/HomeHero"
-import Works from "../Components/Works";
-import ScaleH from "../Components/ScaleH";
-import Intro from "../Components/Intro";
+import Works from "../Components/Works"
+import Intro from "../Components/Intro"
+import PostIntro from "../Components/PostIntro"
 
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
     const isMobile = window.matchMedia("(max-width: 768px)").matches
     useEffect(() => {
         const lenis = new Lenis({
-            duration: isMobile ? 1.5 : 1,
+            duration: isMobile ?2 : 1,
             easing: isMobile
-                ? (t) => t * t * (3 - 2 * t) 
+                ? (t) => t * t * t * (t * (t * 6 - 15) + 10) 
                 : (t) =>t * (2 - t),
             smoothTouch: isMobile ? true : false,
-            inertia: isMobile ? 1 : 0.95,
+            inertia: isMobile ? 0.55 : 0.95,
             syncTouch: true,
         })
 
@@ -39,8 +39,8 @@ const Home = () => {
             <HomeHero />
             <Works />
             <div>
-                <ScaleH/>
-                {/* <Intro/> */}
+                <Intro/>
+                <PostIntro/>
             </div>
             </div>
 

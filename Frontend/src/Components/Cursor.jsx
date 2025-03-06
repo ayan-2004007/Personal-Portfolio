@@ -11,20 +11,20 @@ const Cursor = (() => {
                 duration: 0.5,
                 delay:0.1,
                 ease: "power4.out",
-            });
-        };
+            })
+        }
 
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => window.removeEventListener("mousemove", handleMouseMove);
-    }, [cursorRef]);
+        window.addEventListener("mousemove", handleMouseMove)
+        return () => window.removeEventListener("mousemove", handleMouseMove)
+    }, [cursorRef])
 
     return (
         <div
             ref={cursorRef} 
             className="hidden lg:block fixed top-0 left-0 h-[40px] w-[40px] border-2 border-[#212121] rounded-full z-20 pointer-events-none"
         ></div>
-    );
-});
+    )
+})
 
 
-export default Cursor;
+export default Cursor

@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import arrow from "../Assets/direction.png";
+import React, { useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from "@gsap/react"
+import arrow from "../Assets/direction.png"
 import arr_dwn from "../Assets/arrow_dwn.png"
 
 import p1 from "../Assets/psd01.png"
@@ -11,10 +11,9 @@ import p3 from "../Assets/psd03.png"
 import p4 from "../Assets/psd04.png"
 import p5 from "../Assets/psd05.png"
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 const Works = () => {
-    
     const containerRef = useRef(null);
     const sectionRef = useRef(null);
     const headRef = useRef(null)
@@ -67,7 +66,6 @@ const Works = () => {
         })
         
     }, [])
-
     return (
         <div className="space-y-[84px] md:space-y-[120px] lg:space-y-[144px]">
             <div className="xl:flex xl:flex-col xl:gap-7">
@@ -137,7 +135,7 @@ const Works = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Works;
+export default Works

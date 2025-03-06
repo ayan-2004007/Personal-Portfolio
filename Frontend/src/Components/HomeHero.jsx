@@ -103,7 +103,7 @@ const HomeHero = () => {
                 </div>
             </div>
         </>
-    );
-};
+    )
+}
 
-export default HomeHero;
+export default HomeHero
