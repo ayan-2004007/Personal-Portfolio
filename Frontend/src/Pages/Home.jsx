@@ -8,6 +8,7 @@ import HomeHero from "../Components/HomeHero"
 import Works from "../Components/Works"
 import Intro from "../Components/Intro"
 import PostIntro from "../Components/PostIntro"
+import Transition from "../Components/Transition"
 
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
@@ -41,6 +42,7 @@ const Home = () => {
             <div>
                 <Intro/>
                 <PostIntro/>
+                <Transition/>
             </div>
             </div>
 

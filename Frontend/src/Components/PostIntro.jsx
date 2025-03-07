@@ -20,7 +20,7 @@ const Intro = () => {
                     trigger:codeRef.current,
                     start:"top 80%",
                     end:"top 30%",
-                    scrub:1,
+                    scrub:2,
                 }
             })
         }
@@ -33,7 +33,7 @@ const Intro = () => {
                     trigger:designRef.current,
                     start:"top 80%",
                     end:"top 50%",
-                    scrub:1,
+                    scrub:2,
                 }
             },)
         }
@@ -46,7 +46,7 @@ const Intro = () => {
                     trigger:innovateRef.current,
                     start:"top 80%",
                     end:"top 60%",
-                    scrub:1,
+                    scrub:2,
                 }
             },)
         }
