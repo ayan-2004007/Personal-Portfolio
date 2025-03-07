@@ -10,10 +10,22 @@
     font-family: 'Sohne-Breit', sans-serif;
     word-spacing: 2px;
 }
+/* .dev{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+} */
 body {
     cursor: default;
     margin: 0;
 }
 ::-webkit-scrollbar {
     display: none;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+
+.rotate {
+    animation: rotate 5s linear infinite;
   }

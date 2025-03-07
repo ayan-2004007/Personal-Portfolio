@@ -42,7 +42,7 @@ const SectionTransition = () => {
 
     return (
         <>
-            <div ref={transitionRef} className="relative h-[50vh] w-full bg-black flex flex-col">
+            <div ref={transitionRef} className="relative z-10 w-full bg-black flex flex-col">
                 <div ref={firstRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
                 <div ref={secondRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
                 <div ref={thirdRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
@@ -53,9 +53,6 @@ const SectionTransition = () => {
                 <div ref={eighthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
                 <div ref={ninthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
                 <div ref={tenthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-            </div>
-            <div className="h-screen bg-white w-full">
-
             </div>
         </>
 

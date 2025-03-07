@@ -34,7 +34,6 @@ const HomeHero = () => {
                 y: "100%",
                 ease: "power4.out",
                 delay: 3,
-                toggleActions: "play none play reverse"
             })
         }
         if (iconRef.current) {
@@ -86,11 +85,11 @@ const HomeHero = () => {
                                 <div className="flex flex-col text-white w-full gap-8 xl:gap-0">
                                     <div className="flex flex-col xl:pl-4">
                                         <div className="flex items-baseline w-full">
-                                            <p className="font-sohne text-lg font-bold lg:text-lg lg:font-medium xl:text-xl 2xl:text-2xl ml-1 xl:max-w-[612px]">Building Scalable Web Solutions</p>
+                                            <p className="font-sohne text-lg font-bold lg:font-medium xl:text-xl 2xl:text-2xl ml-1 xl:max-w-[612px] whitespace-nowrap xl:whitespace-normal">Building Scalable Web Solutions</p>
                                             <div className="h-[2px] bg-white w-full"></div>
                                         </div>
                                         <div className="overflow-hidden">
-                                            <h1 ref={headRef} className="font-sohne text-[74px] font-black tracking-tight break-all sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-y-hidden"
+                                            <h1 ref={headRef} className="dev font-sohne text-[74px] font-black tracking-tight text-balance sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-hidden"
                                             >Developer</h1>
                                         </div>
 

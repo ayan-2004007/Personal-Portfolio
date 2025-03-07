@@ -9,6 +9,7 @@ import Works from "../Components/Works"
 import Intro from "../Components/Intro"
 import PostIntro from "../Components/PostIntro"
 import Transition from "../Components/Transition"
+import MarqueeSection from "../Components/MarqueeSection"
 
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
@@ -36,13 +37,14 @@ const Home = () => {
     }, [])
     return (
         <body className="overflow-x-hidden flex flex-col gap-[156px]">
-            <div className="flex flex-col lg:gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
+            <div className="flex flex-col gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
             <HomeHero />
             <Works />
             <div>
                 <Intro/>
                 <PostIntro/>
                 <Transition/>
+                <MarqueeSection/>
             </div>
             </div>
 

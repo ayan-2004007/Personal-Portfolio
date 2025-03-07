@@ -121,7 +121,7 @@ const Intro = () => {
                     <div className="flex flex-col items-start gap-2">
                         <div className="w-full flex flex-col items-start -space-y-5 lg:flex-row lg:-space-y-0 lg:items-center lg:justify-center">
                             <div className="overflow-hidden">
-                                <h1 ref={headRef01} className="font-sohne text-[72px] text-white font-medium uppercase tracking-tight px-2 sm:text-[104px] md:font-bold lg:px-6 lg:tracking-normal xl:text-[144px] 2xl:text-[172px]">Myself</h1>
+                                <h1 ref={headRef01} className="font-sohne text-[68px] text-white font-medium uppercase tracking-tight px-2 sm:text-[104px] md:font-bold lg:px-6 lg:tracking-normal xl:text-[144px] 2xl:text-[172px]">Myself</h1>
                             </div>
                             <div className="flex items-start">
                                 <div className="overflow-hidden">
