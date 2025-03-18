@@ -95,7 +95,7 @@ const Works = () => {
                 <div ref={containerRef} className="flex xl:gap-12">
                     <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
                         <div className="flex flex-col items-center gap-8">
-                            <img src={p1} alt="" className="w-[380px] rounded-[10px] md:w-[524px] lg:w-[656px]" />
+                            <img src={p1} alt="" className="w-[380px] rounded-[10px] md:w-[524px] lg:w-[656px] grayscale-100" />
                             <img src={arr_dwn} alt="" className="h-[75px] w-[30px]" />
                             <p className="font-sohne text-black text-sm px-5 uppercase font-semibold max-w-[374px] mx-auto md:max-w-[450px] md:leading-[19px] lg:text-base lg:max-w-[560px] lg:leading-[24px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
                         </div>

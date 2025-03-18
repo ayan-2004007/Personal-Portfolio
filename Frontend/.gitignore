@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+src/Components/Wave3D.jsx
+src/Components/NewHero.jsx

@@ -43,16 +43,16 @@ const SectionTransition = () => {
     return (
         <>
             <div ref={transitionRef} className="relative z-10 w-full bg-black flex flex-col">
-                <div ref={firstRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={secondRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={thirdRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={fourthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={fifthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={sixthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={seventhRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={eighthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={ninthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
-                <div ref={tenthRef} className="w-full h-[5vh] bg-white origin-top scale-y-0"></div>
+                    <div ref={firstRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={secondRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={thirdRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={fourthRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={fifthRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={sixthRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={seventhRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={eighthRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={ninthRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
+                    <div ref={tenthRef} className="w-full h-[3vh] xl:h-[4vh] bg-white origin-top scale-y-0 z-30"></div>
             </div>
         </>
 

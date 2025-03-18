@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
-import Navbar from '../Components/Navbar'
-import Cursor from '../Components/Cursor'
+import NewNavbar from './NewNavbar'
+import Cursor from './Cursor'
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import bg from "../Assets/holomorph.mp4"
@@ -26,7 +26,7 @@ const HomeHero = () => {
         gsap.fromTo(
             videoRef.current,
             { width: "0%" },
-            { width: "100%", duration: 2, ease: "cubic-bezier(0.41, 0.01, 0.17, 0.99)", delay: 0.5 }
+            { width: "100%", duration: 2, ease: "power4.out", delay: 0.5 }
         )
         if (headRef.current) {
             gsap.from(headRef.current, {
@@ -38,7 +38,7 @@ const HomeHero = () => {
         }
         if (iconRef.current) {
             gsap.from(iconRef.current, {
-                duration: 2,
+                duration:2,
                 y: "-100%",
                 ease: "power4.out",
                 opacity:0,
@@ -51,7 +51,7 @@ const HomeHero = () => {
         <>
             <div className="flex flex-col w-full h-screen gap-10 xl:gap-0 xl:justify-between lg:pb-4">
                 <Cursor />
-                <Navbar />
+                <NewNavbar/>
                 <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">
                     <div className="overflow-hidden">
                         <p ref={textRef} className="my-2 font-sohne text-[#121212] text-[12px] leading-[17px] font-semibold lg:text-sm uppercase lg:font-bold max-w-[586px] lg:leading-[19px] 2xl:leading-[22px]">
