@@ -1,18 +1,29 @@
-import React from "react"
+import React, { useRef } from "react"
 import arrow from "../Assets/arrow.png"
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const NewNavbar = () => {
+    const navRef = useRef(null)
+    useGSAP(() => {
+        gsap.from(navRef.current, {
+            y: "-100%",
+            duration: 2.5,
+            ease: "expo.inOut"
+        })
+    })
+
     return (
         <>
-            <div className="nav-cont w-full font-sohne flex items-center justify-between px-4 pt-4 md:max-w-[758px] md:mx-auto lg:max-w-full xl:px-8  2xl:px-20">
+            <div ref={navRef} className="nav-cont w-full font-sohne flex items-center justify-between px-4 pt-4 md:max-w-[758px] md:mx-auto lg:max-w-full xl:px-8  2xl:px-20">
                 <div className="logo-name flex flex-col gap-1 ">
                     <div className="w-fit text-white font-extrabold bg-[#121212] px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:font-black xl:px-5 xl:py-2">ayan</div>
                     <div className="w-fit text-white font-extrabold bg-[#121212] px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:font-black xl:px-5 xl:py-2">chakraborty</div>
                 </div>
                 <div className='hamburgur flex flex-col gap-[4px] xl:gap-1 lg:hidden'>
-                    <div className='w-[60px] h-[1px] md:h-[2px] md:w-[96px] bg-white'></div>
-                    <div className='w-[60px] h-[1px] md:h-[2px] md:w-[96px] bg-white'></div>
-                    <div className='w-[60px] h-[1px] md:h-[2px] md:w-[96px] bg-white'></div>
+                    <div className='w-[60px] h-[2px] md:h-[2px] md:w-[96px] bg-black'></div>
+                    <div className='w-[60px] h-[2px] md:h-[2px] md:w-[96px] bg-black'></div>
+                    <div className='w-[60px] h-[2px] md:h-[2px] md:w-[96px] bg-black'></div>
                 </div>
 
                 <div className="hidden lg:flex items-center justify-center">

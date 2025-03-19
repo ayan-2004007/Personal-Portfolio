@@ -2,12 +2,22 @@
 
 @font-face {
     font-family: 'Sohne-Breit';
-    src: url('../public/Fonts/TestSöhneBreit-Buch.otf') format('opentype');
+    src: url('./Fonts/TestSöhneBreit-Buch.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Sohne-Breit-light';
+    src: url('./Fonts/TestSöhneBreit-Leicht.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 .font-sohne {
     font-family: 'Sohne-Breit', sans-serif;
+    word-spacing: 2px;
+}
+.font-sohne-light{
+    font-family: 'Sohne-Breit-light', sans-serif;
     word-spacing: 2px;
 }
 /* .dev{
