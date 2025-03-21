@@ -20,6 +20,10 @@
     font-family: 'Sohne-Breit-light', sans-serif;
     word-spacing: 2px;
 }
+::selection {
+    background-color: #121212; 
+    color: #fff; 
+}
 /* .dev{
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;

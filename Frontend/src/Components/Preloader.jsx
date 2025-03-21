@@ -5,7 +5,7 @@ const Preloader = ({ onComplete }) => {
     const [count, setCount] = useState(0);
     const lineRef=useRef(null)
     useEffect(() => {
-        console.log(lineRef.current)
+        // console.log(lineRef.current)
         gsap.fromTo(lineRef.current,
             {scaleX:0.1},
             {scaleX:1,duration:4,ease:"power2.in"}
