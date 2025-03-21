@@ -44,8 +44,8 @@ const Home = () => {
             ) : (
                 <body className="overflow-x-hidden flex flex-col gap-[156px]">
                     <div className="flex flex-col gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
-                        {/* <HomeHero /> */}
-                        {/* <Works /> */}
+                        <HomeHero />
+                        <Works />
                         <div>
                             <Intro />
                             <PostIntro />

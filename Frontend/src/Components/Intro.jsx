@@ -38,9 +38,9 @@ const Intro = () => {
         }
         if (headRef01.current) {
             gsap.from(headRef01.current, {
-                duration: 2.5,
+                duration: 1.6,
                 y: "100%",
-                ease: "power4.out",
+                ease: "expo.inOut",
                 scrollTrigger: {
                     trigger: headRef01.current,
                     start: "top 70%",
@@ -51,9 +51,9 @@ const Intro = () => {
         }
         if (headRef02.current) {
             gsap.from(headRef02.current, {
-                duration: 2.5,
+                duration: 1.6,
                 y: "100%",
-                ease: "power4.out",
+                ease: "expo.inOut",
                 scrollTrigger: {
                     trigger: headRef02.current,
                     start: "top 70%",
@@ -63,13 +63,21 @@ const Intro = () => {
             })
         }
         if (grainRef.current) {
+            const isMobile = window.innerWidth <= 768
+            const opacity = isMobile ? 0.17 : 0.08
+            const endTar=isMobile ? 40 : 50
             gsap.fromTo(grainRef.current,
-                { opacity: 0,transformOrigin: "center"  },
-                {opacity:0.08,duration:0.5,
-                    scrollTrigger:{
-                        trigger:grainRef.current,
-                        start:"top 100",
-                        toggleActions:"play rnone none reverse",
+                { opacity: 0, transformOrigin: "center" },
+                {
+                    opacity: opacity,
+                    duration: 0.5,
+                    scrollTrigger: {
+                        trigger: grainRef.current,
+                        start: "top 100",
+                        end: `bottom ${endTar}%`,
+                        toggleActions: "play none none reverse",
+                        onLeave: () => gsap.to(grainRef.current, { opacity: 0, duration: 0.5 }),
+                        onEnterBack: () => gsap.to(grainRef.current, { opacity: opacity, duration: 0.5 })
                     }
                 })
         }
@@ -130,7 +138,7 @@ const Intro = () => {
 
 
             {/* Grain Background  */}
-            <div className=" w-full bg-black -mt-80 relative z-10">
+            <div className=" w-full bg-black -mt-80 relative z-10 overflow-hidden">
                 <div
                     ref={grainRef}
                     className="grainy absolute inset-0 z-50 pointer-events-none"
@@ -160,27 +168,32 @@ const Intro = () => {
                         <hr ref={hrRef} className="text-[#737373] w-full" />
                     </div>
 
-                    {/* Brief introduction section with arrow image*/}
-                    <div className="w-full flex justify-between px-6 mx-auto md:max-w-[526px] lg:max-w-[888px] 2xl:max-w-[1306px]">
-                        <p className="font-sohne text-[12px] text-white uppercase md:text-sm xl:text-base xl:font-extrabold">( brief introduction )</p>
-                        <img src={arrow} alt="" className="h-[30px] w-[30px] invert md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px] xl:h-[70px] xl:w-[70px] 2xl:h-[80px] 2xl:w-[80px]" />
-                    </div>
-
-
-
-                    {/* Profile section with profile Image */}
-                    <div className="flex flex-col text-[#FFF4F4] gap-6">
-                        <p className="font-sohne-light uppercase text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                        <div className="w-full max-h-[426px] object-cover md:max-w-[556px] lg:max-w-[874px] lg:max-h-[556px] xl:max-w-[1024px] xl:max-h-[624px] 2xl:max-w-[1196px] 2xl:max-h-[724px] overflow-hidden md:overflow-x-clip">
-                            <img ref={profileRef} src={profile} alt="" className="relative w-full max-h-[426px] object-cover md:max-w-[556px] lg:max-w-[874px] lg:max-h-[556px] xl:max-w-[1024px] xl:max-h-[624px] 2xl:max-w-[1196px] 2xl:max-h-[724px]" />
+                    {/* Intor main content  */}
+                    <div className="flex flex-col gap-20 xl:gap-8">
+                        {/* Brief introduction section with arrow image*/}
+                        <div className="w-full flex justify-between px-6 mx-auto md:max-w-[526px] lg:max-w-[888px] 2xl:max-w-[1306px]">
+                            <p className="font-sohne text-[12px] text-white uppercase md:text-sm xl:text-base xl:font-extrabold">( brief introduction )</p>
+                            <img src={arrow} alt="" className="h-[30px] w-[30px] invert md:h-[50px] md:w-[50px] lg:h-[60px] lg:w-[60px] xl:h-[70px] xl:w-[70px] 2xl:h-[80px] 2xl:w-[80px]" />
                         </div>
-                        <p className="font-sohne text-[12px] uppercase leading-[17px] text-justify max-w-[298px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  </p>
+
+
+
+                        {/* Profile section with profile Image */}
+                        <div className="relative flex flex-col text-[#FFF4F4] gap-6">
+                            <p className="font-sohne-light uppercase text-2xl z-10 relative max-w-[490px] md:left-[20%] md:top-10 md:text-3xl md:max-w-[576px] lg:text-4xl lg:left-[30%] lg:max-w-[650px] xl:left-[40%] xl:text-[44px] xl:max-w-[790px] xl:top-16 2xl:text-5xl 2xl:leading-[53px] 2xl:left-[54%] 2xl:top-20">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            </p>
+
+                            <div className="relative w-full max-h-[426px] object-cover sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] overflow-hidden md:overflow-x-clip lg:left-10 xl:left-6">
+                                <img ref={profileRef} src={profile} alt="" className="relative w-full opacity-90 max-h-[426px] object-cover sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] lg:left-10 xl:left-6" />
+                            </div>
+
+                            <p className="font-sohne font-extrabold text-[11px] uppercase leading-[17px] text-justify max-w-[298px] relative z-10 left-10 bottom-28 md:text-[12px] lg:text-sm lg:max-w-[424px] lg:leading-[21px] xl:left-[218px] 2xl:text-base 2xl:leading-[25px] 2xl:bottom-36">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  </p>
+                        </div>
                     </div>
+
                 </div>
             </div>
-
-
-            {/* </div > */}
         </>
     )
 }
