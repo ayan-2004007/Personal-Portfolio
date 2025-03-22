@@ -1,14 +1,75 @@
-import React from "react"
+import React,{useRef} from "react"
 import arrow from "../Assets/direction.png"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from "@gsap/react"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Expertise = () => {
+    const hr1Ref=useRef(null)
+    const hr2Ref=useRef(null)
+    const hr3Ref=useRef(null)
+    const hr4Ref=useRef(null)
+    useGSAP(()=>{
+        ScrollTrigger.refresh();
+        if(hr1Ref.current){
+            gsap.fromTo(hr1Ref.current,{width:"0%"},
+                {width:"100%",duration:2,ease:"power2.out",
+                    scrollTrigger:{
+                        trigger:hr1Ref.current,
+                        start:"top bottom",
+                        toggleActions: "play reverse play reverse",
+                        scrub:1
+                    }
+                }
+            )
+        }
+        if(hr2Ref.current){
+            gsap.fromTo(hr2Ref.current,{width:"0%"},
+                {width:"100%",duration:2,ease:"power2.out",
+                    scrollTrigger:{
+                        trigger:hr2Ref.current,
+                        start:"top bottom",
+                        toggleActions: "play reverse play reverse",
+                        scrub:1
+                    }
+                }
+            )
+        }
+        if(hr3Ref.current){
+            gsap.fromTo(hr3Ref.current,{width:"0%"},
+                {width:"100%",duration:2,ease:"power2.out",
+                    scrollTrigger:{
+                        trigger:hr3Ref.current,
+                        start:"top bottom",
+                        toggleActions: "play reverse play reverse",
+                        scrub:1
+                    }
+                }
+            )
+        }
+        if(hr4Ref.current){
+            gsap.fromTo(hr4Ref.current,{width:"0%"},
+                {width:"100%",duration:2,ease:"power2.out",
+                    scrollTrigger:{
+                        trigger:hr4Ref.current,
+                        start:"top bottom",
+                        toggleActions: "play reverse play reverse",
+                        scrub:1
+                    }
+                }
+            )
+        }
+    },[])
+
     return (
         <>
             <div className="w-full flex flex-col gap-16 pb-10">
 
                 {/* Ui/Ux  */}
                 <div className="flex flex-col gap-3 xl:gap-12">
-                    <hr className="text-[#737373] w-full" />
+                    <hr ref={hr1Ref} className="text-[#737373] w-full" />
                     <div className="flex flex-col gap-4 px-4 sm:mx-auto xl:flex-row xl:mx-0 xl:justify-between ">
                         <div className="flex items-baseline gap-6 lg:gap-10 xl:w-full xl:justify-around">
                             <p className="font-sohne text-[#434343] text-6xl font-extrabold md:text-7xl lg:text-8xl xl:text-9xl">01</p>
@@ -24,7 +85,7 @@ const Expertise = () => {
 
                 {/* Frontend  */}
                 <div className="flex flex-col gap-3 xl:gap-12">
-                    <hr className="text-[#737373] w-full" />
+                    <hr ref={hr2Ref} className="text-[#737373] w-full" />
                     <div className="flex flex-col gap-4 px-4 sm:mx-auto xl:flex-row xl:mx-0 xl:justify-between ">
                         <div className="flex items-baseline gap-6 lg:gap-10 xl:w-full xl:justify-around">
                             <p className="font-sohne text-[#434343] text-6xl font-extrabold md:text-7xl lg:text-8xl xl:text-9xl">02</p>
@@ -39,7 +100,7 @@ const Expertise = () => {
 
                 {/* Backend  */}
                 <div className="flex flex-col gap-3 xl:gap-12">
-                    <hr className="text-[#737373] w-full" />
+                    <hr ref={hr3Ref} className="text-[#737373] w-full" />
                     <div className="flex flex-col gap-4 px-4 sm:mx-auto xl:flex-row xl:mx-0 xl:justify-between ">
                         <div className="flex items-baseline gap-6 lg:gap-10 xl:w-full xl:justify-around">
                             <p className="font-sohne text-[#434343] text-6xl font-extrabold md:text-7xl lg:text-8xl xl:text-9xl">03</p>
@@ -54,7 +115,7 @@ const Expertise = () => {
 
                 {/* 3D modelling  */}
                 <div className="flex flex-col gap-3 xl:gap-12">
-                    <hr className="text-[#737373] w-full" />
+                    <hr ref={hr4Ref} className="text-[#737373] w-full" />
                     <div className="flex flex-col gap-4 px-4 sm:mx-auto xl:flex-row xl:mx-0 xl:justify-between ">
                         <div className="flex items-baseline gap-6 lg:gap-10 xl:w-full xl:justify-around">
                             <p className="font-sohne text-[#434343] text-6xl font-extrabold md:text-7xl lg:text-8xl xl:text-9xl">04</p>

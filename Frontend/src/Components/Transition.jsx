@@ -13,7 +13,7 @@ const SectionTransition = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: transitionRef.current,
-                start: "top 50%",
+                start: "top 70%",
                 scrub: 1,
                 toggleActions: "play none play reverse",
             }

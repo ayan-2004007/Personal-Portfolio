@@ -18,6 +18,7 @@ const Intro = () => {
     const textRef = useRef(null)
     const profileRef = useRef(null)
     const grainRef = useRef(null)
+    const paraRef=useRef(null)
 
     useGSAP(() => {
         if (zoomRef.current) {
@@ -66,7 +67,7 @@ const Intro = () => {
         if (grainRef.current) {
             const isMobile = window.innerWidth <= 768
             const opacity = isMobile ? 0.17 : 0.08
-            const endTar = isMobile ? 10 : 30
+            const endTar = isMobile ? 30 : 40
             gsap.fromTo(grainRef.current,
                 { opacity: 0, transformOrigin: "center" },
                 {
@@ -127,6 +128,18 @@ const Intro = () => {
                 }
             )
         }
+        if(paraRef.current){
+            gsap.fromTo(paraRef.current,{opacity:0.3},
+                {opacity:1,duration:1.5, 
+                    scrollTrigger:{
+                        trigger:paraRef.current,
+                        start:"top 80%",
+                        end:"top 50%",
+                        toggleActions:"play none none reverse"
+                    }
+                }
+            )
+        }
     }, [])
 
     return (
@@ -180,7 +193,7 @@ const Intro = () => {
 
                         {/* Profile section with profile Image */}
                         <div className="relative flex flex-col text-[#FFF4F4] gap-6">
-                            <p className="font-sohne-light uppercase text-2xl z-10 relative max-w-[490px] md:left-[20%] md:top-10 md:text-3xl md:max-w-[576px] lg:text-4xl lg:left-[30%] lg:max-w-[650px] xl:left-[40%] xl:text-[44px] xl:max-w-[790px] xl:top-16 2xl:text-5xl 2xl:leading-[53px] 2xl:left-[54%] 2xl:top-20">
+                            <p ref={paraRef} className="font-sohne-light uppercase text-2xl z-10 relative max-w-[490px] md:left-[20%] md:top-10 md:text-3xl md:max-w-[576px] lg:text-4xl lg:left-[30%] lg:max-w-[650px] xl:left-[40%] xl:text-[44px] xl:max-w-[790px] xl:top-16 2xl:text-5xl 2xl:leading-[53px] 2xl:left-[54%] 2xl:top-20">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                             </p>
 
