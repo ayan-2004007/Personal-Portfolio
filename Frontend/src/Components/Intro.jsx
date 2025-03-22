@@ -6,6 +6,7 @@ import arrow from "../Assets/direction.png"
 import profile from "../Assets/profile.jpg"
 import grain from "../Assets/grain.gif"
 
+import Expertise from "./Expertise"
 gsap.registerPlugin(ScrollTrigger)
 
 const Intro = () => {
@@ -40,7 +41,7 @@ const Intro = () => {
             gsap.from(headRef01.current, {
                 duration: 1.6,
                 y: "100%",
-                ease: "expo.inOut",
+                ease: "power4.out",
                 scrollTrigger: {
                     trigger: headRef01.current,
                     start: "top 70%",
@@ -53,7 +54,7 @@ const Intro = () => {
             gsap.from(headRef02.current, {
                 duration: 1.6,
                 y: "100%",
-                ease: "expo.inOut",
+                ease: "power4.out",
                 scrollTrigger: {
                     trigger: headRef02.current,
                     start: "top 70%",
@@ -65,7 +66,7 @@ const Intro = () => {
         if (grainRef.current) {
             const isMobile = window.innerWidth <= 768
             const opacity = isMobile ? 0.17 : 0.08
-            const endTar=isMobile ? 40 : 50
+            const endTar = isMobile ? 10 : 30
             gsap.fromTo(grainRef.current,
                 { opacity: 0, transformOrigin: "center" },
                 {
@@ -136,9 +137,8 @@ const Intro = () => {
                 </h1>
             </div>
 
-
-            {/* Grain Background  */}
             <div className=" w-full bg-black -mt-80 relative z-10 overflow-hidden">
+                {/* Grain Background  */}
                 <div
                     ref={grainRef}
                     className="grainy absolute inset-0 z-50 pointer-events-none"
@@ -168,7 +168,7 @@ const Intro = () => {
                         <hr ref={hrRef} className="text-[#737373] w-full" />
                     </div>
 
-                    {/* Intor main content  */}
+                    {/* Intro main content  */}
                     <div className="flex flex-col gap-20 xl:gap-8">
                         {/* Brief introduction section with arrow image*/}
                         <div className="w-full flex justify-between px-6 mx-auto md:max-w-[526px] lg:max-w-[888px] 2xl:max-w-[1306px]">
@@ -190,6 +190,11 @@ const Intro = () => {
 
                             <p className="font-sohne font-extrabold text-[11px] uppercase leading-[17px] text-justify max-w-[298px] relative z-10 left-10 bottom-28 md:text-[12px] lg:text-sm lg:max-w-[424px] lg:leading-[21px] xl:left-[218px] 2xl:text-base 2xl:leading-[25px] 2xl:bottom-36">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  </p>
                         </div>
+                    </div>
+
+                    {/* Expertise section  */}
+                    <div>
+                        <Expertise/>
                     </div>
 
                 </div>

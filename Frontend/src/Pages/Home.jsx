@@ -10,6 +10,7 @@ import Works from "../Components/Works"
 import Intro from "../Components/Intro"
 import PostIntro from "../Components/PostIntro"
 import Transition from "../Components/Transition"
+import Footer from "../Components/Footer"
 // import MarqueeSection from "../Components/MarqueeSection"
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,8 +49,9 @@ const Home = () => {
                         <Works />
                         <div>
                             <Intro />
-                            <PostIntro />
-                            {/* <MarqueeSection/> */}
+                            <Transition/>
+                            
+                        <Footer/>
                         </div>
                     </div>
                 </body>
