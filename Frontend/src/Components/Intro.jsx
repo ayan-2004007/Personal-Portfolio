@@ -109,7 +109,6 @@ const Intro = () => {
                     trigger: textRef.current,
                     start: "top 80%",
                     toggleActions: "play none play reverse",
-
                 },
             })
         }
