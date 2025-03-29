@@ -46,9 +46,6 @@ const Home = () => {
                 <body className="overflow-x-hidden flex flex-col gap-[156px]">
                     <div className="flex flex-col gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
                         <div className="felx flecol">
-                            {/* <div className="relative z-50">
-                                <NewNavbar />
-                            </div> */}
                             <HomeHero />
                         </div>
                         <Works />
