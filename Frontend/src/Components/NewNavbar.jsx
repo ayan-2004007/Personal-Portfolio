@@ -15,7 +15,7 @@ const NewNavbar = () => {
 
     return (
         <>
-            <div ref={navRef} className="nav-cont fixed left-0 top-0 z-50 w-full font-sohne flex items-center justify-between px-4 pt-4 md:max-w-[758px] md:mx-auto lg:max-w-full xl:px-8  2xl:px-20">
+            <div ref={navRef} className="nav-cont w-full font-sohne flex items-center justify-between px-4 pt-4 md:max-w-[758px] md:mx-auto lg:max-w-full xl:px-8  2xl:px-20">
                 <div className="logo-name flex flex-col gap-1 ">
                     <div className="w-fit text-white font-extrabold bg-black px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:font-black xl:px-5 xl:py-2">ayan</div>
                     <div className="w-fit text-white font-extrabold bg-black px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:font-black xl:px-5 xl:py-2">chakraborty</div>

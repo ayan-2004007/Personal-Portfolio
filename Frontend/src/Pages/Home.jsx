@@ -55,7 +55,6 @@ const Home = () => {
                         <div>
                             <Intro />
                             <Transition />
-
                             <Footer />
                         </div>
                     </div>

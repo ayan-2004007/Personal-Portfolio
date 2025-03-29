@@ -26,7 +26,7 @@ const Works = () => {
             gsap.from(headRef.current, {
                 duration: 2,
                 y: "100%",
-                ease: "expo.inOut",
+                ease: "power4.out",
                 scrollTrigger: {
                     trigger: headRef.current,
                     start: "top 80%",
