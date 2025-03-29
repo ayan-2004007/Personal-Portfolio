@@ -5,12 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import Preloader from "../Components/Preloader"
 import HomeHero from "../Components/HomeHero"
-// import NewHero from "../Components/NewHero"
 import Works from "../Components/Works"
 import Intro from "../Components/Intro"
 import PostIntro from "../Components/PostIntro"
 import Transition from "../Components/Transition"
 import Footer from "../Components/Footer"
+import NewNavbar from "../Components/NewNavbar"
 // import MarqueeSection from "../Components/MarqueeSection"
 
 gsap.registerPlugin(ScrollTrigger);
@@ -45,13 +45,18 @@ const Home = () => {
             ) : (
                 <body className="overflow-x-hidden flex flex-col gap-[156px]">
                     <div className="flex flex-col gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
-                        <HomeHero />
+                        <div className="felx flecol">
+                            {/* <div className="relative z-50">
+                                <NewNavbar />
+                            </div> */}
+                            <HomeHero />
+                        </div>
                         <Works />
                         <div>
                             <Intro />
-                            <Transition/>
-                            
-                        <Footer/>
+                            <Transition />
+
+                            <Footer />
                         </div>
                     </div>
                 </body>
