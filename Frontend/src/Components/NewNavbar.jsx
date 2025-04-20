@@ -12,6 +12,7 @@ const NewNavbar = () => {
             ease: "expo.inOut"
         })
     })
+    
 
     return (
         <>
@@ -40,9 +41,9 @@ const NewNavbar = () => {
                 </div>
 
                 <div className="hidden lg:flex flex-col gap-1 items-end">
-                    <div className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px]">linkedin</div>
-                    <div className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px]">github</div>
-                    <div className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px]">instagram</div>
+                    <div className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px] hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">linkedin</div>
+                    <div className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px] hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">github</div>
+                    <div className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px] hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">instagram</div>
                 </div>
 
             </div>
