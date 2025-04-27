@@ -12,22 +12,40 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Sohne-Breit-Halbfett';
+    src: url('./Fonts/TestSöhneBreit-Halbfett.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family:'Sohne-Breit-Fett';
+    src:url('./Fonts/TestSöhneBreit-Fett.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 .font-sohne {
     font-family: 'Sohne-Breit', sans-serif;
-    word-spacing: 2px;
+    word-spacing: normal;
 }
 .font-sohne-light{
     font-family: 'Sohne-Breit-light', sans-serif;
-    word-spacing: 2px;
+    word-spacing: normal;
 }
+.font-sohne-halbfett{
+    font-family: 'Sohne-Breit-Halbfett', sans-serif;
+    word-spacing: normal;
+}
+.font-sohne-fett{
+    font-family: 'Sohne-Breit-Fett', sans-serif;
+    word-spacing: normal;
+}
+
 ::selection {
     background-color: #121212; 
     color: #fff; 
 }
-/* .dev{
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-} */
+
 body {
     cursor: default;
     margin: 0;
@@ -42,4 +60,7 @@ body {
 
 .rotate {
     animation: rotate 5s linear infinite;
+}
+.contact-tag{
+    word-spacing: 0.5rem;
 }
