@@ -6,7 +6,7 @@ import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import bg from "../Assets/holomorph.mp4"
 
-const HomeHero = () => {
+const HomeHero = ({setTransitionPath}) => {
     const textRef = useRef(null)
     const headRef = useRef(null)
     const videoRef = useRef(null)
@@ -57,7 +57,7 @@ const HomeHero = () => {
         <>
                 <div className="flex flex-col w-full h-screen gap-10 xl:gap-0 sm:justify-between lg:pb-4">
                     <Cursor />
-                    <NewNavbar />
+                    <NewNavbar setTransitionPath={setTransitionPath}/>
                     <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">
                         <div className="overflow-hidden">
                             <p ref={textRef} className="my-2 font-sohne text-[#121212] text-[12px] leading-[17px] font-semibold lg:text-sm uppercase lg:font-bold max-w-[586px] lg:leading-[19px] 2xl:leading-[22px]">

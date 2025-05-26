@@ -14,7 +14,7 @@ import NewNavbar from "../Components/NewNavbar"
 // import MarqueeSection from "../Components/MarqueeSection"
 
 gsap.registerPlugin(ScrollTrigger);
-const Home = () => {
+const Home = ({setTransitionPath}) => {
     const isMobile = window.matchMedia("(max-width: 768px)").matches
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -43,10 +43,10 @@ const Home = () => {
             {loading ? (
                 <Preloader onComplete={() => setLoading(false)} />
             ) : (
-                <body className="overflow-x-hidden flex flex-col gap-[156px]">
+                <div className="overflow-x-hidden flex flex-col gap-[156px]">
                     <div className="flex flex-col gap-[48px] xl:gap-[100px] 2xl:gap-[156px]">
                         <div className="felx flecol">
-                            <HomeHero />
+                            <HomeHero setTransitionPath={setTransitionPath}/>
                         </div>
                         <Works />
                         <div>
@@ -55,7 +55,7 @@ const Home = () => {
                             <Footer />
                         </div>
                     </div>
-                </body>
+                </div>
             )}
         </>
 

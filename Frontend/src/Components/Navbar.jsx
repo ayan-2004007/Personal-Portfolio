@@ -1,4 +1,5 @@
 import React,{useRef} from 'react'
+import {useNavigate} from 'react-router-dom'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import logo from "../Assets/logo.png"
@@ -6,6 +7,7 @@ import moon from "../Assets/moon_btn.png"
 import arrow from "../Assets/arrow.png"
 
 const Navbar = () => {
+    const navigate=useNavigate()
     const navRef=useRef(null)
     // useGSAP(()=>{
     //     gsap.from(".hamburgur",{
@@ -40,7 +42,7 @@ const Navbar = () => {
                     </div>
                     <div className='hidden lg:flex items-center gap-2 xl:gap-3'>
                         {/* <img src={moon} alt="" className='w-[48px] h-[48px]' /> */}
-                        <button className="h-[64px] w-[234px] bg-[#121212] rounded-[60px] flex items-center justify-between px-2 pl-10 text-white font-sohne text-base font-medium xl:pl-10 group hover:cursor-pointer">
+                        <button onClick={()=>{console.log("clicked")}} className="h-[64px] w-[234px] bg-[#121212] rounded-[60px] flex items-center justify-between px-2 pl-10 text-white font-sohne text-base font-medium xl:pl-10 group hover:cursor-pointer">
                             <span className="transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] transform group-hover:translate-x-[50px]">
                                 LETS WORK
                             </span>
