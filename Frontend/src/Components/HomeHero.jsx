@@ -20,38 +20,38 @@ const HomeHero = ({setTransitionPath}) => {
                 y: "110%",
                 ease: "expo.inOut",
                 delay: 2
-            });
+            })
 
             gsap.fromTo(
                 contRef.current,
                 { scaleX: 0, transformOrigin: "center" },
                 { scaleX: 1, duration: 2.5, ease: "expo.inOut" }
-            );
+            )
 
             gsap.fromTo(
                 videoRef.current,
                 { opacity: 0, transformOrigin: "center" },
                 { opacity: 1, duration: 2.5, ease: "expo.inOut", delay: 1.5 }
-            );
+            )
 
             gsap.from(headRef.current, {
                 duration: 2,
                 y: "100%",
                 ease: "expo.inOut",
                 delay: 2
-            });
+            })
 
             gsap.fromTo(
                 subHeadRef.current,
                 { opacity: 0, },
                 { opacity: 1, duration: 2.5, ease: "expo.inOut", delay: 1.5 }
-            );
+            )
             gsap.fromTo(
                 roleRef.current,
                 { opacity: 0, },
                 { opacity: 1, duration: 2.5, ease: "expo.inOut", delay: 1.5 }
-            );
-    },);
+            )
+    },)
 
     return (
         <>
@@ -101,7 +101,7 @@ const HomeHero = ({setTransitionPath}) => {
                     </div>
                 </div>
         </>
-    );
-};
+    )
+}
 
-export default HomeHero;
+export default HomeHero

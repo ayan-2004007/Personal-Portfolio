@@ -1,26 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-
-const bars = [0, 1, 2, 3];
+import React, { useEffect, useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+const bars = [0, 1, 2, 3]
 
 const TransitionOverlay = ({ isActive, onComplete }) => {
-  const [exitPhase, setExitPhase] = useState(false);
+  const [exitPhase, setExitPhase] = useState(false)
 
   useEffect(() => {
     if (isActive) {
-      // Trigger exit animation after a delay
       const timeout = setTimeout(() => {
-        setExitPhase(true);
-        // Call parent completion function after exit
+        setExitPhase(true)
         setTimeout(() => {
-          onComplete?.();
-          setExitPhase(false);
-        }, 800); // match exit duration
-      }, 600); // duration of entry
-      return () => clearTimeout(timeout);
+          onComplete?.()
+          setExitPhase(false)
+        }, 800)
+      }, 600)
+      return () => clearTimeout(timeout)
     }
-  }, [isActive, onComplete]);
-
+  }, [isActive, onComplete])
   return (
     <AnimatePresence>
       {isActive && (
@@ -43,7 +39,7 @@ const TransitionOverlay = ({ isActive, onComplete }) => {
         </div>
       )}
     </AnimatePresence>
-  );
-};
+  )
+}
 
-export default TransitionOverlay;
+export default TransitionOverlay

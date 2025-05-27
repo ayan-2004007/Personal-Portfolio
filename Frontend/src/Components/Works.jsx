@@ -13,14 +13,14 @@ import p5 from "../Assets/psd05.png"
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 const Works = () => {
-    const containerRef = useRef(null);
-    const sectionRef = useRef(null);
+    const containerRef = useRef(null)
+    const sectionRef = useRef(null)
     const headRef = useRef(null)
     const hrRef = useRef(null)
 
     useGSAP(() => {
-        const container = containerRef.current;
-        // const sections = gsap.utils.toArray(".projects");
+        const container = containerRef.current
+        // const sections = gsap.utils.toArray(".projects")
 
         if (headRef.current) {
             gsap.from(headRef.current, {

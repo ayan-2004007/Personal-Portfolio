@@ -39,7 +39,7 @@ const Cursor = () => {
                 className="hidden lg:flex fixed top-0 left-0 h-2 w-2 bg-[#121212] rounded-full z-30 pointer-events-none"
             ></div>
         </>
-    );
-};
+    )
+}
 
-export default Cursor;
+export default Cursor

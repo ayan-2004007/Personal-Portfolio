@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React, { useState, useEffect, useRef } from "react"
+import { gsap } from "gsap"
 import loader from "../Assets/loading.gif"
 
 const Preloader = ({ onComplete }) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0)
     const lineRef = useRef(null)
     useEffect(() => {
         // console.log(lineRef.current)
@@ -12,30 +12,30 @@ const Preloader = ({ onComplete }) => {
             { scaleX: 1, duration: 4, ease: "power2.in" }
         )
 
-        let counter = 0;
+        let counter = 0
         const interval = setInterval(() => {
             if (counter < 100) {
-                counter += 1;
-                setCount(counter);
+                counter += 1
+                setCount(counter)
             } else {
-                clearInterval(interval);
+                clearInterval(interval)
                 gsap.to(".preloader", {
                     y: "-100%",
                     duration: 1.8,
                     ease: "expo.inOut",
                     onComplete: () => {
                         if (onComplete) {
-                            onComplete();
+                            onComplete()
                         }
                     }
-                });
+                })
             }
-        }, 40);
+        }, 40)
 
         return () => {
-            clearInterval(interval);
-        };
-    }, [onComplete]);
+            clearInterval(interval)
+        }
+    }, [onComplete])
 
     return (
         <div className="preloader w-full h-screen bg-black flex flex-col justify-around font-sohne text-white xl:justify-between">
@@ -62,7 +62,7 @@ const Preloader = ({ onComplete }) => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Preloader;
+export default Preloader

@@ -7,16 +7,16 @@ import Preloader from "../Components/Preloader"
 import HomeHero from "../Components/HomeHero"
 import Works from "../Components/Works"
 import Intro from "../Components/Intro"
-import PostIntro from "../Components/PostIntro"
+// import PostIntro from "../Components/PostIntro"
 import Transition from "../Components/Transition"
 import Footer from "../Components/Footer"
-import NewNavbar from "../Components/NewNavbar"
+// import NewNavbar from "../Components/NewNavbar"
 // import MarqueeSection from "../Components/MarqueeSection"
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 const Home = ({setTransitionPath}) => {
     const isMobile = window.matchMedia("(max-width: 768px)").matches
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         const lenis = new Lenis({
             duration: isMobile ? 2 : 1,
@@ -29,14 +29,14 @@ const Home = ({setTransitionPath}) => {
         })
 
         function raf(time) {
-            lenis.raf(time);
-            ScrollTrigger.update();
-            requestAnimationFrame(raf);
+            lenis.raf(time)
+            ScrollTrigger.update()
+            requestAnimationFrame(raf)
         }
-        requestAnimationFrame(raf);
+        requestAnimationFrame(raf)
         return () => {
-            lenis.destroy();
-        };
+            lenis.destroy()
+        }
     }, [])
     return (
         <>
