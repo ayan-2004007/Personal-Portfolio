@@ -1,53 +1,48 @@
-import React, { useRef } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const TransitionOverlay = ({ onComplete }) => {
-  const barsRef = useRef([]);
-  const container = useRef();
+const bars = [0, 1, 2, 3];
 
-  useGSAP(() => {
-    let tl = gsap.timeline({
-      onComplete: () => onComplete?.()
-    });
+const TransitionOverlay = ({ isActive, onComplete }) => {
+  const [exitPhase, setExitPhase] = useState(false);
 
-    tl.to(barsRef.current, {
-      y: 0,
-      duration: 0.5,
-      stagger: {
-        each: 0.1,
-        from: "end"
-      },
-      ease: "power4.out"
-    });
-
-    // Disappear after short delay
-    tl.to(barsRef.current, {
-      y: "-100%",
-      duration: 0.6,
-      stagger: {
-        each: 0.1,
-        from: "start"
-      },
-      delay: 0.3,
-      ease: "power4.in"
-    });
-  }, { scope: container });
+  useEffect(() => {
+    if (isActive) {
+      // Trigger exit animation after a delay
+      const timeout = setTimeout(() => {
+        setExitPhase(true);
+        // Call parent completion function after exit
+        setTimeout(() => {
+          onComplete?.();
+          setExitPhase(false);
+        }, 800); // match exit duration
+      }, 600); // duration of entry
+      return () => clearTimeout(timeout);
+    }
+  }, [isActive, onComplete]);
 
   return (
-    <div ref={container} className="fixed top-0 left-0 w-full h-full z-[9999] pointer-events-none overflow-hidden">
-      {[...Array(4)].map((_, i) => (
-        <div
-          key={i}
-          ref={el => el && (barsRef.current[i] = el)}
-          className="absolute bottom-0 w-1/4 h-full bg-black"
-          style={{
-            left: `${i * 25}%`,
-            transform: "translateY(100%)"
-          }}
-        />
-      ))}
-    </div>
+    <AnimatePresence>
+      {isActive && (
+        <div className="fixed top-0 left-0 w-full h-full z-[9999] pointer-events-none overflow-hidden">
+          {bars.map((i) => (
+            <motion.div
+              key={i}
+              className="absolute bottom-0 w-1/4 h-full bg-black"
+              style={{ left: `${i * 25}%` }}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-100%" }}
+              transition={{
+                duration: 0.6,
+                ease: "easeInOut",
+                delay: i * 0.1 + (exitPhase ? 0.3 : 0)
+              }}
+            />
+          ))}
+        </div>
+      )}
+    </AnimatePresence>
   );
 };
 
