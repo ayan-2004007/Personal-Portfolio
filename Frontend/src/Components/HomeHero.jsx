@@ -88,7 +88,7 @@ const HomeHero = ({setTransitionPath}) => {
                                                 <div className="h-[2px] bg-white w-full"></div>
                                             </div>
                                             <div className="overflow-hidden">
-                                                <h1 ref={headRef} className="dev font-sohne-light text-white text-[74px] tarcking-tight xl:tracking-tighter text-balance sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-hidden">
+                                                <h1 ref={headRef} className="dev break-all font-sohne-light text-white text-[74px] tarcking-tight xl:tracking-tighter text-balance sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-hidden">
                                                     Developer
                                                 </h1>
                                             </div>

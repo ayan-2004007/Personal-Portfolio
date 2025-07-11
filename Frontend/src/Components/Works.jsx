@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
@@ -8,7 +8,7 @@ import p1 from "../Assets/psd01.png"
 import p2 from "../Assets/psd02.png"
 import p3 from "../Assets/psd03.png"
 import p4 from "../Assets/psd04.png"
-import p5 from "../Assets/psd05.png"
+import p6 from "../Assets/psd06.jpg"
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
@@ -17,6 +17,42 @@ const Works = () => {
     const sectionRef = useRef(null)
     const headRef = useRef(null)
     const hrRef = useRef(null)
+    const circleRef=useRef(null)
+
+    const redirect = (link) => {
+        window.open(link, "_blank")
+    }
+
+    useEffect(() => {
+        const circle = document.getElementById("hover-circle")
+        const projects = document.querySelectorAll('.projects')
+        const isMobile = window.innerWidth < 768
+        const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+        if (isMobile || isTouch) return
+        const handleMouseMove = (e) => {
+           gsap.to(circle,{
+            duration:0.3,
+            x:e.clientX,
+            y:e.clientY,
+            ease:"power2.out"
+           })
+        }
+        const showCircle = () => { circle.classList.remove("hidden") }
+        const hideCircle = () => { circle.classList.add("hidden") }
+
+        projects.forEach(project => {
+            project.addEventListener('mouseenter', showCircle)
+            project.addEventListener('mousemove', handleMouseMove)
+            project.addEventListener('mouseleave', hideCircle)
+        })
+        return () => {
+            projects.forEach(project => {
+                project.removeEventListener('mouseenter', showCircle)
+                project.removeEventListener('mousemove', handleMouseMove)
+                project.removeEventListener('mouseleave', hideCircle)
+            })
+        }
+    }, [])
 
     useGSAP(() => {
         const container = containerRef.current
@@ -63,7 +99,7 @@ const Works = () => {
                 scrub: 1,
             },
         })
-        
+
     }, [])
     return (
         <div className="space-y-[84px] md:space-y-[120px] lg:space-y-[144px]">
@@ -91,43 +127,52 @@ const Works = () => {
             </div>
 
             <div ref={sectionRef} className="h-screen w-screen overflow-hidden xl:w-auto">
+
+                <div
+                    ref={circleRef}
+                    id="hover-circle"
+                    className="h-24 w-24 fixed hidden flex items-center justify-center text-white bg-black rounded-full pointer-events-none z-50 font-sohne text-sm"
+                >
+                    See Project
+                </div>
+
                 <div ref={containerRef} className="flex xl:gap-12">
-                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                    <div onClick={() => { redirect("https://www.google.com") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col items-start gap-12">
+                            <img src={p6} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
+                            <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                        </div>
+                    </div>
+
+                    <div onClick={() => { redirect("https://bookaholiclibrary.netlify.app/") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
+                        <div className="flex flex-col-reverse items-start gap-12">
                             <img src={p1} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
                             <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
                         </div>
                     </div>
 
-                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
-                        <div className="flex flex-col-reverse items-start gap-12">
-                            <img src={p2} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
-                            <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
-                        </div>
-                    </div>
-
-                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                    <div onClick={() => { redirect("https://www.figma.com/proto/zS0aeOQNTwN9dnwMlPWHEs/CRESCENDO?node-id=2361-1328&t=U1bMTzqCJmxHA4ra-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=301%3A2") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col items-start gap-12">
                             <img src={p3} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
                             <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
                         </div>
                     </div>
 
-                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                    <div onClick={() => { redirect("https://surakshasecurity.netlify.app/") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col-reverse items-start gap-12">
                             <img src={p4} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
                             <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
                         </div>
                     </div>
 
-                    <div className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto">
+                    <div onClick={() => { redirect("https://www.figma.com/proto/WKmic680O6pfH5DGHY138E/Your-Aesthetics?node-id=1-2&t=cN6dhJButpW0kfx4-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col items-start gap-12">
-                            <img src={p5} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
+                            <img src={p2} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
                             <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
                         </div>
                     </div>
-                    
-                   
+
+
                 </div>
             </div>
         </div>
