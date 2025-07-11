@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee"
 import arrow from "../Assets/arrow.png"
 import direction from "../Assets/direction.png"
 
-const Footer = () => {
+const Footer = ({setTransitionPath}) => {
     return (
         <>
             <div className="h-[90vh] pb-10 w-full bg-white flex flex-col justify-between sm:h-screen sm:py-4 xl:justify-around xl:pb-0 2xl:py-0">
@@ -23,7 +23,7 @@ const Footer = () => {
                             <p className="text-sm font-sohne uppercase font-black">2025 | ayan chakrbaorty</p>
                         </div>
                         <div className="flex flex-wrap gap-3">
-                            <button className="h-16 w-50 xl:h-[64px] xl:w-[234px] bg-black rounded-[60px] flex items-center justify-between px-2 pl-10 text-white font-sohne text-sm xl:text-base font-bold xl:pl-10 group hover:cursor-pointer">
+                            <button onClick={()=>setTransitionPath("/contact")} className="h-16 w-50 xl:h-[64px] xl:w-[234px] bg-black rounded-[60px] flex items-center justify-between px-2 pl-10 text-white font-sohne text-sm xl:text-base font-bold xl:pl-10 group hover:cursor-pointer">
                                 <span className="transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] transform group-hover:translate-x-[50px]">
                                     LETS WORK
                                 </span>
@@ -51,7 +51,7 @@ const Footer = () => {
                         <p className="text-sm font-sohne uppercase font-black">2025 | ayan chakrbaorty</p>
                     </div>
                     <div className="flex flex-wrap gap-3">
-                        <button className="h-16 w-50 xl:h-[64px] xl:w-[234px] bg-black rounded-[60px] flex items-center justify-between px-2 pl-10 text-white font-sohne text-sm xl:text-base font-bold xl:pl-10 group hover:cursor-pointer">
+                        <button onClick={()=>setTransitionPath("/contact")} className="h-16 w-50 xl:h-[64px] xl:w-[234px] bg-black rounded-[60px] flex items-center justify-between px-2 pl-10 text-white font-sohne text-sm xl:text-base font-bold xl:pl-10 group hover:cursor-pointer">
                             <span className="transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] transform group-hover:translate-x-[50px]">
                                 LETS WORK
                             </span>

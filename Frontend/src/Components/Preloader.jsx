@@ -5,9 +5,10 @@ import loader from "../Assets/loading.gif"
 const Preloader = ({ onComplete }) => {
     const [count, setCount] = useState(0)
     const lineRef = useRef(null)
+
     useEffect(() => {
-        // console.log(lineRef.current)
-        gsap.fromTo(lineRef.current,
+        gsap.fromTo(
+            lineRef.current,
             { scaleX: 0.1 },
             { scaleX: 1, duration: 4, ease: "power2.in" }
         )
@@ -32,9 +33,7 @@ const Preloader = ({ onComplete }) => {
             }
         }, 40)
 
-        return () => {
-            clearInterval(interval)
-        }
+        return () => clearInterval(interval)
     }, [onComplete])
 
     return (
@@ -54,8 +53,9 @@ const Preloader = ({ onComplete }) => {
                 <div ref={lineRef} className="h-[1px] bg-[#7a7a7a] flex-grow"></div>
                 <p className="whitespace-nowrap uppercase font-extrabold">( portfolio )</p>
             </div>
+
             <div className="flex flex-row w-full justify-between items-baseline pl-6">
-                <img src={loader} alt="" className="w-10 h-10 lg:w-16 lg:h-16"/>
+                <img src={loader} alt="loader" className="w-10 h-10 lg:w-16 lg:h-16"/>
                 <div className="flex items-center justify-end px-2 xl:px-4">
                     <p className="font-sohne-light text-[124px] md:text-[176px] lg:text-[256px] 2xl:text-[356px]">{count}</p>
                     <p className="text-[54px] lg:text-[96px]">%</p>

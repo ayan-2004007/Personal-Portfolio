@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 const bars = [0, 1, 2, 3]
 
-const TransitionOverlay = ({ isActive, onComplete }) => {
+const PageTransition = ({ isActive, onComplete }) => {
   const [exitPhase, setExitPhase] = useState(false)
 
   useEffect(() => {
@@ -42,4 +42,4 @@ const TransitionOverlay = ({ isActive, onComplete }) => {
   )
 }
 
-export default TransitionOverlay
+export default PageTransition
