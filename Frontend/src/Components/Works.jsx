@@ -115,10 +115,7 @@ const Works = () => {
                         <img src={arrow} alt="" className="h-[40px] w-[40px] md:h-[60px] md:w-[60px] lg:h-[80px] lg:w-[80px] xl:w-[100px] xl:h-[100px]" />
                     </div>
                     <div className="flex flex-col gap-2">
-                        <p className="uppercase px-3 font-sohne font-semibold text-[#121212] text-[10px] leading-[15px] max-w-[374px] mx-auto md:text-[12px] md:leading-[19px] md:max-w-[450px] lg:leading-[19px] lg:max-w-[524px] lg:mr-14 xl:mr-0 xl:px-0 xl:text-sm xl:leading-[20px] xl:max-w-[595px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                            enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                        <p className="uppercase px-3 font-sohne font-semibold text-[#121212] text-[10px] leading-[15px] max-w-[374px] mx-auto md:text-[12px] md:leading-[19px] md:max-w-[450px] lg:leading-[19px] lg:max-w-[524px] lg:mr-14 xl:mr-0 xl:px-0 xl:text-sm xl:leading-[20px] xl:max-w-[595px]">Here's a glimpse into what I've been building. From sleek frontends to powerful full stack apps, each project reflects my passion for problem-solving and clean design. Scroll down to see what I've been up to.
                         </p>
                         <hr className="h-[1px] bg-[#121212] xl:hidden" />
                     </div>
@@ -140,35 +137,35 @@ const Works = () => {
                     <div onClick={() => { redirect("https://www.google.com") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col items-start gap-12">
                             <img src={p6} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
-                            <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                            <p className="font-sohne text-black text-sm px-5 max-w-[276px]  uppercase font-semibold md:leading-[19px] lg:leading-[22px]">AI-powered medical chatbot that analyzes symptoms and predicts diseases using LLMs. Features natural language input, voice support, and an intuitive interface.</p>
                         </div>
                     </div>
 
                     <div onClick={() => { redirect("https://bookaholiclibrary.netlify.app/") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col-reverse items-start gap-12">
                             <img src={p1} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
-                            <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                            <p className="font-sohne text-black text-sm px-5 max-w-[276px]  uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Online library system that simplifies book browsing, borrowing, and returning. Designed to modernize library management for users and admins alike.</p>
                         </div>
                     </div>
 
                     <div onClick={() => { redirect("https://www.figma.com/proto/zS0aeOQNTwN9dnwMlPWHEs/CRESCENDO?node-id=2361-1328&t=U1bMTzqCJmxHA4ra-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=301%3A2") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col items-start gap-12">
                             <img src={p3} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
-                            <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                            <p className="font-sohne text-black text-sm px-5 max-w-[276px]  uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Web design created for my college’s educational club. Designed in Figma with a modern, student-centric layout reflecting the identity of the Crescendo coding wing.</p>
                         </div>
                     </div>
 
                     <div onClick={() => { redirect("https://surakshasecurity.netlify.app/") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col-reverse items-start gap-12">
                             <img src={p4} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
-                            <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                            <p className="font-sohne text-black text-sm px-5 max-w-[276px]  uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Frontend website for a security services client. Built with a clean layout and responsive design using React and Tailwind.</p>
                         </div>
                     </div>
 
                     <div onClick={() => { redirect("https://www.figma.com/proto/WKmic680O6pfH5DGHY138E/Your-Aesthetics?node-id=1-2&t=cN6dhJButpW0kfx4-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col items-start gap-12">
                             <img src={p2} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
-                            <p className="font-sohne text-black text-sm px-5 max-w-[276px] text-justify uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Bookaholic is a modern online library system that streamlines book discovery, management, and lending, providing users with an efficient and seamless digital reading experience.</p>
+                            <p className="font-sohne text-black text-sm px-5 max-w-[276px]  uppercase font-semibold md:leading-[19px] lg:leading-[22px]">Web design for an interior design agency, focusing on modern aesthetics, clean visuals, and interactive user experience.</p>
                         </div>
                     </div>
 

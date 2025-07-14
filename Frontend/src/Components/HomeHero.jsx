@@ -61,7 +61,7 @@ const HomeHero = ({setTransitionPath}) => {
                     <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">
                         <div className="overflow-hidden">
                             <p ref={textRef} className="my-2 font-sohne text-[#121212] text-[12px] leading-[17px] font-semibold lg:text-sm uppercase lg:font-bold max-w-[586px] lg:leading-[19px] 2xl:leading-[22px]">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                I'm Ayan Chakraborty, a passionate Full Stack Developer crafting scalable, user-centric web applications. I blend clean code with thoughtful UI/UX to build digital experiences that are fast, functional, and future ready.
                             </p>
                         </div>
                         <p className="font-sohne text-[#121212] text-2xl uppercase font-bold max-w-[586px] leading-[25px]">(01)</p>

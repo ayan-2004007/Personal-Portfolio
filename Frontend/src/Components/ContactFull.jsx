@@ -34,7 +34,7 @@ const ContactFull = () => {
                     <div className="xl:flex sm:self-center xl:self-start xl:w-full xl:justify-between">
                         <div className="flex flex-col gap-14 xl:pl-8 2xl:pl-20">
                             <div className="flex flex-col gap-3 pl-6 sm:mx-auto xl:mx-0">
-                                <p className="text-white font-sohne-light uppercase text-[11px]">( Lorem ipsum dolor  )</p>
+                                <p className="text-white font-sohne-light uppercase text-[11px]">( I will reach you ...  )</p>
                                 <div className="flex gap-3">
                                     <input type="text" placeholder="ENTER YOUR EMAIL" className="text-black font-sohne-halbfett text-sm bg-white placeholder:text-black pl-6 pr-12 py-3 rounded-[60px] focus:outline-[#AEEE00] md:pr-20" />
                                     <button onClick={()=>{handleClick()}} className="h-12 w-12 bg-white rounded-full flex items-center justify-center"><img src={arrow} alt="" className="invert h-10 w-10 hover:-rotate-45 duration-150 ease-in-out cursor-pointer" /></button>
@@ -47,13 +47,13 @@ const ContactFull = () => {
                         <div className="hidden xl:flex flex-col gap-9 pr-20 -mt-50">
                             <div className="flex flex-col gap-6">
                                 <img src={profile} alt="" className="h-20 w-20 rounded-full object-cover" />
-                                <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                                <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Have an idea or project in mind? Let’s talk — feel free to email or connect with me anytime.</p>
                             </div>
                             <div className="flex gap-4">
                                 <div className="flex flex-col gap-2">
                                     <div className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm "><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />Linkedin</div>
                                     <div className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm "><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />github</div>
-                                    <div className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm "><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />instagram</div>
+                                    <div className="flex gap-4 items-center text-white font-sohne-fett text-sm "><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />ayanchakraborty2004@gmail.com</div>
                                 </div>
                                 <img src={dir} alt="" className="h-16 w-16 invert -rotate-90 opacity-70" />
                             </div>
@@ -62,7 +62,7 @@ const ContactFull = () => {
 
                     <div className="flex gap-3 self-end px-4 sm:px-8 xl:hidden">
                         <img src={profile} alt="" className="h-20 w-20 rounded-full object-cover" />
-                        <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                        <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Have an idea or project in mind? Let’s talk — feel free to email or connect with me anytime.</p>
                     </div>
                 </div>
             </div>

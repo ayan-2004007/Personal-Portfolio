@@ -193,14 +193,14 @@ const Intro = () => {
                         {/* Profile section with profile Image */}
                         <div className="relative flex flex-col text-[#FFF4F4] gap-6">
                             <p ref={paraRef} className="font-sohne-light uppercase text-2xl z-10 relative max-w-[490px] md:left-[20%] md:top-10 md:text-3xl md:max-w-[576px] lg:text-4xl lg:left-[30%] lg:max-w-[650px] xl:left-[40%] xl:text-[44px] xl:max-w-[790px] xl:top-16 2xl:text-5xl 2xl:leading-[53px] 2xl:left-[54%] 2xl:top-20">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                Aspiring full stack developer building real-world projects while constantly learning and evolving in tech.
                             </p>
 
                             <div className="relative w-full max-h-[426px] object-cover sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] overflow-hidden md:overflow-x-clip lg:left-10 xl:left-6">
                                 <img ref={profileRef} src={profile} alt="" className="relative w-full opacity-90 max-h-[426px] object-cover sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] lg:left-10 xl:left-6" />
                             </div>
 
-                            <p className="font-sohne font-extrabold text-[11px] uppercase leading-[17px] text-justify max-w-[298px] relative z-10 left-10 bottom-28 md:text-[12px] lg:text-sm lg:max-w-[424px] lg:leading-[21px] xl:left-[218px] 2xl:text-base 2xl:leading-[25px] 2xl:bottom-36">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  </p>
+                            <p className="font-sohne font-extrabold text-[11px] uppercase leading-[17px] text-justify max-w-[298px] relative z-10 left-10 bottom-28 md:text-[12px] lg:text-sm lg:max-w-[424px] lg:leading-[21px] xl:left-[218px] 2xl:text-base 2xl:leading-[25px] 2xl:bottom-36">I'm Ayan Chakraborty, a 21-year-old Computer Science graduate, focused on full stack development with strong expertise in the MERN stack, UI/UX, and practical project building. I've completed multiple freelance, college and personal projects—including live applications. As a quick learner with deep CS knowledge, I adapt to new tech easily. I'm currently learning AI/ML to build intelligent, scalable, future-ready web solutions.</p>
                         </div>
                     </div>
 
