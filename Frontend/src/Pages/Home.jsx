@@ -18,15 +18,15 @@ const Home = ({ setTransitionPath }) => {
     const [loading, setLoading] = useState(() => {
         return !sessionStorage.getItem("hasSeenPreloader")
     })
-    useEffect(()=>{
-        const disableRightClick=(e)=>{
-            e.preventDefault()
-        }
-        document.addEventListener("contextmenu",disableRightClick)
-        return()=>{
-            document.addEventListener("contextmenu",disableRightClick)
-        }
-    },[])
+    // useEffect(()=>{
+    //     const disableRightClick=(e)=>{
+    //         e.preventDefault()
+    //     }
+    //     document.addEventListener("contextmenu",disableRightClick)
+    //     return()=>{
+    //         document.addEventListener("contextmenu",disableRightClick)
+    //     }
+    // },[])
 
     useEffect(() => {
         const lenis = new Lenis({

@@ -136,7 +136,7 @@ const Expertise = () => {
             {/*5. Database  */}
             <div className="flex flex-col gap-3 xl:gap-12">
                 <hr 
-                    ref={el => hrRefs.current[3] = el} 
+                    ref={el => hrRefs.current[4] = el} 
                     className="text-[#737373] h-px border-none bg-[#737373] w-0" 
                 />
                 <div className="flex flex-col gap-4 px-4 sm:mx-auto xl:flex-row xl:mx-0 xl:justify-between">

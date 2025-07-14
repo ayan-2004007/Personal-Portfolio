@@ -64,3 +64,9 @@ body {
 .contact-tag{
     word-spacing: 0.5rem;
 }
+
+@media (max-width:410px){
+    .dev{
+        font-size: 62px !important;
+    }
+}
