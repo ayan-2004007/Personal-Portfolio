@@ -141,7 +141,7 @@ const Expertise = () => {
                 />
                 <div className="flex flex-col gap-4 px-4 sm:mx-auto xl:flex-row xl:mx-0 xl:justify-between">
                     <div className="flex items-baseline gap-6 lg:gap-10 xl:w-full xl:justify-around">
-                        <p className="font-sohne text-[#434343] text-6xl font-extrabold md:text-7xl lg:text-8xl xl:text-9xl">04</p>
+                        <p className="font-sohne text-[#434343] text-6xl font-extrabold md:text-7xl lg:text-8xl xl:text-9xl">05</p>
                         <p className="font-sohne font-bold text-white text-xl uppercase lg:text-2xl">( Databases )</p>
                     </div>
                     <div className="flex items-end gap-6 mx-auto lg:gap-8 xl:mx-0 xl:w-full xl:justify-around">

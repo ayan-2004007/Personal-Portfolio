@@ -15,10 +15,18 @@ gsap.registerPlugin(ScrollTrigger)
 const Home = ({ setTransitionPath }) => {
     const isMobile = window.matchMedia("(max-width: 768px)").matches
 
-    // Load preloader only once per session
     const [loading, setLoading] = useState(() => {
         return !sessionStorage.getItem("hasSeenPreloader")
     })
+    useEffect(()=>{
+        const disableRightClick=(e)=>{
+            e.preventDefault()
+        }
+        document.addEventListener("contextmenu",disableRightClick)
+        return()=>{
+            document.addEventListener("contextmenu",disableRightClick)
+        }
+    },[])
 
     useEffect(() => {
         const lenis = new Lenis({
