@@ -1,12 +1,14 @@
 import React, { useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import arrow from "../Assets/arrow.png"
 import profile from "../Assets/profile.jpg"
 import grain from "../Assets/grain.gif"
 import dir from "../Assets/direction.png"
 
 const ContactFull = () => {
+    const navigate=useNavigate()
     const handleClick=()=>{
-        alert("Ayan is busy")
+        alert("This button was supposed to send an email. But Ayan prioritized passing his exams. Wise choice?")
     }
     return (
         <>
@@ -23,8 +25,8 @@ const ContactFull = () => {
 
                 <div className="relative flex flex-col justify-between h-full py-7 pb-14 z-10">
                     {/* Navbar Logo  */}
-                    <div className="w-full px-6">
-                        <div className="logo-name flex flex-col gap-1 font-sohne-fett">
+                    <div onClick={()=>{navigate("/")}} className="logo w-full px-6">
+                        <div className="logo-name flex flex-col gap-1 font-sohne-halbfett cursor-pointer">
                             <div className="w-fit text-black bg-white px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:px-5 xl:py-2">ayan</div>
                             <div className="w-fit text-black bg-white px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:px-5 xl:py-2">chakraborty</div>
                         </div>
@@ -41,7 +43,7 @@ const ContactFull = () => {
                                 </div>
                             </div> 
                             <div className="px-2">
-                                <p className="contact-tag text-white uppercase text-[3.5rem] font-sohne-fett break-all -tracking-[2px] leading-[52px] sm:text-center sm:break-normal sm:max-w-[676px] md:text-[4.5rem] md:leading-[62px] lg:text-[6rem] lg:leading-[82px] lg:max-w-[872px] xl:text-left 2xl:text-[7.5rem] 2xl:leading-[108px] 2xl:max-w-[1113px]">Partnership Starts with Hello</p>
+                                <p className="contact-tag text-white uppercase text-[3.5rem] font-sohne-fett break-all -tracking-[2px] leading-[52px] sm:text-center sm:break-normal sm:max-w-[676px] md:text-[4.5rem] md:leading-[62px] lg:text-[6rem] lg:leading-[82px] lg:max-w-[872px] xl:text-left 2xl:text-[6.5rem] 2xl:leading-[92px] 2xl:max-w-[1113px]">Partnership Starts with Hello</p>
                             </div>
                         </div>
                         <div className="hidden xl:flex flex-col gap-9 pr-20 -mt-50">
@@ -62,7 +64,7 @@ const ContactFull = () => {
 
                     <div className="flex gap-3 self-end px-4 sm:px-8 xl:hidden">
                         <img src={profile} alt="" className="h-20 w-20 rounded-full object-cover" />
-                        <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Have an idea or project in mind? Let’s talk — feel free to email or connect with me anytime.</p>
+                        <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Have an idea or project in mind? Let's talk — feel free to email or connect with me anytime.</p>
                     </div>
                 </div>
             </div>

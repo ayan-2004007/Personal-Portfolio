@@ -70,3 +70,12 @@ body {
         font-size: 62px !important;
     }
 }
+@media (min-width:1764px){
+    .dev{
+        font-size:328px !important; 
+    }
+    .contact-tag{
+        font-size: 7.5rem;
+        line-height: 108px;
+    }
+}

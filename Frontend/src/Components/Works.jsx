@@ -128,12 +128,12 @@ const Works = () => {
                 <div
                     ref={circleRef}
                     id="hover-circle"
-                    className="h-24 w-24 fixed hidden flex items-center justify-center text-white bg-black rounded-full pointer-events-none z-50 font-sohne text-sm"
+                    className="h-24 w-24 fixed hidden lg:flex items-center justify-center text-white bg-black rounded-full pointer-events-none z-50 font-sohne text-sm"
                 >
                     See Project
                 </div>
 
-                <div ref={containerRef} className="flex xl:gap-12">
+                <div ref={containerRef} className="flex gap-2 xl:gap-12">
                     <div onClick={() => { redirect("https://www.google.com") }} className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer">
                         <div className="flex flex-col items-start gap-12">
                             <img src={p6} alt="" className="w-[380px] md:w-[524px] lg:w-[656px]" />
