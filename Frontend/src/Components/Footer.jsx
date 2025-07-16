@@ -4,6 +4,14 @@ import arrow from "../Assets/arrow.png"
 import direction from "../Assets/direction.png"
 
 const Footer = ({setTransitionPath}) => {
+    const handleDownloadClick=()=>{
+        console.log("clicked")
+        window.open("../Ayan-resume.pdf")
+    }
+    const socialNavigate=(link)=>{
+        window.open(link,"_blank")
+    }
+
     return (
         <>
             <div className="h-[90vh] pb-10 w-full bg-white flex flex-col justify-between sm:h-screen sm:py-4 xl:justify-around xl:pb-0 2xl:py-0">
@@ -12,8 +20,8 @@ const Footer = ({setTransitionPath}) => {
                 <div className="flex w-full items-start justify-between xl:px-6 2xl:px-14">
                     <div className="w-full flex flex-col gap-2 items-end px-4 md:px-8 xl:w-fit xl:items-start">
                         <div className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">ayanchakraborty2004@gmail.com</div>
-                        <div className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">linkedIn</div>
-                        <div className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">Github</div>
+                        <div onClick={()=>{socialNavigate("https://www.linkedin.com/in/ayan-chakraborty-607736305")}} className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">linkedIn</div>
+                        <div onClick={()=>{socialNavigate("https://github.com/ayan-2004007")}} className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">Github</div>
                     </div>
                     {/* Location and CTAs (Visible after XL)  */}
                     <div className="xl:flex flex-col px-4 gap-2 md:px-8 hidden ">
@@ -29,10 +37,10 @@ const Footer = ({setTransitionPath}) => {
                                 <img
                                     src={arrow}
                                     alt=""
-                                    className="-rotate-45 h-[ lg:text-[196px]45px] w-[45px] xl:w-[48px] xl:h-[48px] transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] transform group-hover:-translate-x-[150px]"
+                                    className="-rotate-45 h-[45px] w-[45px] xl:w-[48px] xl:h-[48px] transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] transform group-hover:-translate-x-[150px]"
                                 />
                             </button>
-                            <button className="hidden sm:block border-2 border-[#121212] rounded-[60px] px-4 font-sohne text-sm uppercase font-bold hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">download resume</button>
+                            <button onClick={()=>{handleDownloadClick()}} className="hidden sm:block border-2 border-[#121212] rounded-[60px] px-4 font-sohne text-sm uppercase font-bold hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">download resume</button>
                         </div>
                     </div>
                 </div>
@@ -60,7 +68,7 @@ const Footer = ({setTransitionPath}) => {
                                 className="-rotate-45 h-[ lg:text-[196px]45px] w-[45px] xl:w-[48px] xl:h-[48px] transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] transform group-hover:-translate-x-[150px]"
                             />
                         </button>
-                        <button className="hidden sm:block border-2 border-[#121212] rounded-[60px] px-4 font-sohne text-sm uppercase font-bold hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">download resume</button>
+                        <button onClick={()=>{handleDownloadClick()}} className="hidden sm:block border-2 border-[#121212] rounded-[60px] px-4 font-sohne text-sm uppercase font-bold hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">download resume</button>
                     </div>
                 </div>
 
