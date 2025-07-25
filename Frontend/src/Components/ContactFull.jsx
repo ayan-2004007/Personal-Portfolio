@@ -6,8 +6,12 @@ import grain from "../Assets/grain.gif"
 import dir from "../Assets/direction.png"
 
 const ContactFull = () => {
-    const navigate=useNavigate()
-    const handleClick=()=>{
+    const handleSocialLink = (link) => {
+        window.open(link, "__blank")
+    }
+
+    const navigate = useNavigate()
+    const handleClick = () => {
         alert("This button was supposed to send an email. But Ayan prioritized passing his exams. Wise choice?")
     }
     return (
@@ -25,7 +29,7 @@ const ContactFull = () => {
 
                 <div className="relative flex flex-col justify-between h-full py-7 pb-14 z-10">
                     {/* Navbar Logo  */}
-                    <div onClick={()=>{navigate("/")}} className="logo w-full px-6">
+                    <div onClick={() => { navigate("/") }} className="logo w-full px-6">
                         <div className="logo-name flex flex-col gap-1 font-sohne-halbfett cursor-pointer">
                             <div className="w-fit text-black bg-white px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:px-5 xl:py-2">ayan</div>
                             <div className="w-fit text-black bg-white px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:px-5 xl:py-2">chakraborty</div>
@@ -39,9 +43,9 @@ const ContactFull = () => {
                                 <p className="text-white font-sohne-light uppercase text-[11px]">( I will reach you ...  )</p>
                                 <div className="flex gap-3">
                                     <input type="text" placeholder="ENTER YOUR EMAIL" className="text-black font-sohne-halbfett text-sm bg-white placeholder:text-black pl-6 pr-12 py-3 rounded-[60px] focus:outline-[#AEEE00] md:pr-20" />
-                                    <button onClick={()=>{handleClick()}} className="h-12 w-12 bg-white rounded-full flex items-center justify-center"><img src={arrow} alt="" className="invert h-10 w-10 hover:-rotate-45 duration-150 ease-in-out cursor-pointer" /></button>
+                                    <button onClick={() => { handleClick() }} className="h-12 w-12 bg-white rounded-full flex items-center justify-center"><img src={arrow} alt="" className="invert h-10 w-10 hover:-rotate-45 duration-150 ease-in-out cursor-pointer" /></button>
                                 </div>
-                            </div> 
+                            </div>
                             <div className="px-2">
                                 <p className="contact-tag text-white uppercase text-[3.5rem] font-sohne-fett break-all -tracking-[2px] leading-[52px] sm:text-center sm:break-normal sm:max-w-[676px] md:text-[4.5rem] md:leading-[62px] lg:text-[6rem] lg:leading-[82px] lg:max-w-[872px] xl:text-left 2xl:text-[6.5rem] 2xl:leading-[92px] 2xl:max-w-[1113px]">Partnership Starts with Hello</p>
                             </div>
@@ -53,8 +57,8 @@ const ContactFull = () => {
                             </div>
                             <div className="flex gap-4">
                                 <div className="flex flex-col gap-2">
-                                    <div className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm "><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />Linkedin</div>
-                                    <div className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm "><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />github</div>
+                                    <div onClick={() => { handleSocialLink("https://www.linkedin.com/in/ayan-chakraborty-607736305") }} className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm cursor-pointer"><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />Linkedin</div>
+                                    <div onClick={()=>{handleSocialLink("https://github.com/ayan-2004007")}} className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm cursor-pointer"><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />github</div>
                                     <div className="flex gap-4 items-center text-white font-sohne-fett text-sm "><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />ayanchakraborty2004@gmail.com</div>
                                 </div>
                                 <img src={dir} alt="" className="h-16 w-16 invert -rotate-90 opacity-70" />
