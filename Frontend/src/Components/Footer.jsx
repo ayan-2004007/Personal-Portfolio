@@ -6,7 +6,7 @@ import direction from "../Assets/direction.png"
 const Footer = ({setTransitionPath}) => {
     const handleDownloadClick=()=>{
         console.log("clicked")
-        window.open("../Ayan-resume.pdf")
+        window.open("../AyanResume.pdf")
     }
     const socialNavigate=(link)=>{
         window.open(link,"_blank")

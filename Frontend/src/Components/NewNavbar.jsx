@@ -79,7 +79,7 @@ const NewNavbar = ({ setTransitionPath }) => {
                 </div>
 
                 <div className="hidden lg:flex flex-col gap-1 items-end">
-                    <div onClick={()=>socialNavigate("https://www.linkedin.com/in/ayan-chakraborty-607736305")} className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px] hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">linkedin</div>
+                    <div onClick={()=>socialNavigate("https://www.linkedin.com/in/ayan-chakraborty143118")} className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px] hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">linkedin</div>
                     <div onClick={()=>socialNavigate("https://github.com/ayan-2004007")} className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px] hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">github</div>
                     <div onClick={()=>socialNavigate("https://www.instagram.com/ayanchakraborty43/")} className="w-fit text-black font-extrabold text-[13px] uppercase text-right border-[1px] xl:border-2 border-[#121212] px-5 py-1 2xl:text-[15px] hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">instagram</div>
                 </div>
