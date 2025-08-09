@@ -106,7 +106,7 @@ const NewNavbar = ({ setTransitionPath }) => {
                 </div>
 
                 <div className="flex flex-col gap-10 px-4">
-                    <p onClick={()=>{socialNavigate("https://www.linkedin.com/in/ayan-chakraborty-607736305")}} className="text-white font-sohne-light uppercase text-5xl">Linkedin</p>
+                    <p onClick={()=>{socialNavigate("https://www.linkedin.com/in/ayan-chakraborty143118")}} className="text-white font-sohne-light uppercase text-5xl">Linkedin</p>
                     <p onClick={()=>{socialNavigate("https://github.com/ayan-2004007")}} className="text-white font-sohne-light uppercase text-5xl">Github</p>
                     <p onClick={()=>{socialNavigate("https://www.instagram.com/ayanchakraborty43/")}} className="text-white font-sohne-light uppercase text-5xl">instgram</p>
                 </div>

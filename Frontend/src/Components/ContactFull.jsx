@@ -57,7 +57,7 @@ const ContactFull = () => {
                             </div>
                             <div className="flex gap-4">
                                 <div className="flex flex-col gap-2">
-                                    <div onClick={() => { handleSocialLink("https://www.linkedin.com/in/ayan-chakraborty-607736305") }} className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm cursor-pointer"><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />Linkedin</div>
+                                    <div onClick={() => { handleSocialLink("https://www.linkedin.com/in/ayan-chakraborty143118") }} className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm cursor-pointer"><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />Linkedin</div>
                                     <div onClick={()=>{handleSocialLink("https://github.com/ayan-2004007")}} className="flex gap-4 items-center text-white font-sohne-fett uppercase text-sm cursor-pointer"><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />github</div>
                                     <div className="flex gap-4 items-center text-white font-sohne-fett text-sm "><div className="h-3 w-3 rounded-full bg-[#DBFF46]" />ayanchakraborty2004@gmail.com</div>
                                 </div>

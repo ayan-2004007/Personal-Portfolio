@@ -20,7 +20,7 @@ const Footer = ({setTransitionPath}) => {
                 <div className="flex w-full items-start justify-between xl:px-6 2xl:px-14">
                     <div className="w-full flex flex-col gap-2 items-end px-4 md:px-8 xl:w-fit xl:items-start">
                         <div className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in">ayanchakraborty2004@gmail.com</div>
-                        <div onClick={()=>{socialNavigate("https://www.linkedin.com/in/ayan-chakraborty-607736305")}} className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">linkedIn</div>
+                        <div onClick={()=>{socialNavigate("https://www.linkedin.com/in/ayan-chakraborty143118")}} className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">linkedIn</div>
                         <div onClick={()=>{socialNavigate("https://github.com/ayan-2004007")}} className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">Github</div>
                     </div>
                     {/* Location and CTAs (Visible after XL)  */}
@@ -74,7 +74,7 @@ const Footer = ({setTransitionPath}) => {
 
                 {/* Marquee  */}
                 <div className="w-full flex flex-col">
-                    
+
                     {/* Divider  */}
                     <hr className="text-[#A4A4A4] w-full h-[2px] xl:h-[3px]" />
 
