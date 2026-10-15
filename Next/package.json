@@ -1,0 +1,29 @@
+{
+  "name": "ayan-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "node scripts/flatten-segments.mjs",
+    "preview": "npx serve@latest out"
+  },
+  "dependencies": {
+    "@gsap/react": "2.1.2",
+    "@studio-freight/lenis": "1.0.42",
+    "framer-motion": "12.15.0",
+    "gsap": "3.12.7",
+    "next": "16.4.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-fast-marquee": "1.6.5"
+  },
+  "overrides": {
+    "motion-dom": "12.15.0",
+    "motion-utils": "12.12.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.11",
+    "tailwindcss": "4.1.11"
+  }
+}

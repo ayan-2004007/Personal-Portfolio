@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+.font-sohne {
+    font-family: var(--font-sohne-breit), sans-serif;
+    word-spacing: normal;
+}
+.font-sohne-light {
+    font-family: var(--font-sohne-breit-light), sans-serif;
+    word-spacing: normal;
+}
+.font-sohne-halbfett {
+    font-family: var(--font-sohne-breit-halbfett), sans-serif;
+    word-spacing: normal;
+}
+.font-sohne-fett {
+    font-family: var(--font-sohne-breit-fett), sans-serif;
+    word-spacing: normal;
+}
+
+::selection {
+    background-color: #121212;
+    color: #fff;
+}
+
+body {
+    cursor: default;
+    margin: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+.rotate {
+    animation: rotate 5s linear infinite;
+}
+.contact-tag {
+    word-spacing: 0.5rem;
+}
+
+html.js-pending .site-content {
+    visibility: hidden;
+}
+html.preload-pending body {
+    background-color: #000;
+}
+
+@media (max-width:410px) {
+    .dev {
+        font-size: 62px !important;
+    }
+}
+@media (min-width:1764px) {
+    .dev {
+        font-size: 328px !important;
+    }
+    .contact-tag {
+        font-size: 7.5rem;
+        line-height: 108px;
+    }
+}
