@@ -10,7 +10,7 @@ const Footer = () => {
     const setTransitionPath = useTransitionPath()
 
     const handleDownloadClick = () => {
-        window.open("/AyanResume.pdf")
+        window.open("/Ayan-Chakraborty-Resume-Latest.pdf")
     }
 
     return (
