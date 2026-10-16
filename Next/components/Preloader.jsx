@@ -46,7 +46,7 @@ const Preloader = ({ onComplete }) => {
                     <div className="w-fit text-black font-extrabold bg-white px-2 py-1 uppercase text-[11px] sm:text-[12px] sm:px-3 sm:py-1 xl:text-sm xl:font-black xl:px-5 xl:py-2">chakraborty</div>
                 </div>
                 <div className="flex flex-col">
-                    <p className="uppercase text-sm">copyright 2025</p>
+                    <p className="uppercase text-sm">copyright 2026</p>
                     <p className="uppercase text-sm">made and maintained by ayan</p>
                 </div>
             </div>

@@ -25,7 +25,7 @@ const Footer = () => {
                 <div className="xl:flex flex-col px-4 gap-2 md:px-8 hidden ">
                     <div className="flex flex-col">
                         <p className="text-sm font-sohne uppercase font-black">kolkata</p>
-                        <p className="text-sm font-sohne uppercase font-black">2025 | ayan chakraborty</p>
+                        <p className="text-sm font-sohne uppercase font-black">2026 | ayan chakraborty</p>
                     </div>
                     <div className="flex flex-wrap gap-3">
                         <button onClick={() => setTransitionPath("/contact")} className="h-16 w-50 xl:h-[64px] xl:w-[234px] bg-black rounded-[60px] flex items-center justify-between px-2 pl-10 text-white font-sohne text-sm xl:text-base font-bold xl:pl-10 group hover:cursor-pointer">
@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="flex flex-col px-4 gap-2 md:px-8 xl:hidden">
                 <div className="flex flex-col">
                     <p className="text-sm font-sohne uppercase font-black">kolkata</p>
-                    <p className="text-sm font-sohne uppercase font-black">2025 | ayan chakraborty</p>
+                    <p className="text-sm font-sohne uppercase font-black">2026 | ayan chakraborty</p>
                 </div>
                 <div className="flex flex-wrap gap-3">
                     <button onClick={() => setTransitionPath("/contact")} className="h-16 w-50 xl:h-[64px] xl:w-[234px] bg-black rounded-[60px] flex items-center justify-between px-2 pl-10 text-white font-sohne text-sm xl:text-base font-bold xl:pl-10 group hover:cursor-pointer">

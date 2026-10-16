@@ -60,7 +60,7 @@ const HomeHero = () => {
             <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">
                 <div className="overflow-hidden">
                     <p ref={textRef} className="my-2 font-sohne text-[#121212] text-[12px] leading-[17px] font-semibold lg:text-sm uppercase lg:font-bold max-w-[586px] lg:leading-[19px] 2xl:leading-[22px]">
-                        I'm Ayan Chakraborty, a passionate Full Stack Developer crafting scalable, user-centric web applications. I blend clean code with thoughtful UI/UX to build digital experiences that are fast, functional, and future ready.
+                        I'm Ayan Chakraborty, a Full Stack Developer building scalable SaaS platforms, complex business systems and high-performance web apps from system architecture and business logic to polished, intuitive user experiences.
                     </p>
                 </div>
                 <p className="font-sohne text-[#121212] text-2xl uppercase font-bold max-w-[586px] leading-[25px]">(01)</p>
@@ -73,26 +73,27 @@ const HomeHero = () => {
                     <div className="relative z-10 w-full">
                         <div className="flex flex-col gap-10 h-[508px] justify-between pt-9 pb-2 lg:h-[530px] 2xl:h-[580px]">
                             <div className="flex flex-col items-start px-6 gap-6 lg:flex-row justify-end">
-                                <div ref={roleRef} className="flex gap-1 text-white text-base">
-                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">Full Stack Developer</div>
-                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">Ui/UX</div>
+                                <div ref={roleRef} className="flex flex-wrap gap-1 text-white text-base">
+                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">SaaS Products</div>
+                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">System Architecture</div>
+                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">Tech Lead</div>
                                 </div>
                             </div>
                             <div className="flex flex-col text-white w-full gap-8 xl:gap-0">
                                 <div className="flex flex-col xl:pl-4">
                                     <div ref={subHeadRef} className="flex items-baseline w-full">
-                                        <p className="font-sohne text-lg font-bold lg:font-medium xl:text-xl 2xl:text-2xl ml-1 xl:max-w-[612px] whitespace-nowrap xl:whitespace-normal">
-                                            Building Scalable Web Solutions
+                                        <p className="font-sohne text-lg font-bold lg:font-medium xl:text-xl 2xl:text-2xl ml-1 whitespace-nowrap pr-2">
+                                            Full Stack Software
                                         </p>
                                         <div className="h-[2px] bg-white w-full"></div>
                                     </div>
-                                    <div className="overflow-hidden">
-                                        <h1 ref={headRef} className="dev break-all font-sohne-light text-white text-[74px] xl:tracking-tighter text-balance sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[270px] overflow-hidden">
-                                            Developer
+                                    <div className="overflow-hidden 2xl:pb-12 2xl:-mb-12">
+                                        <h1 ref={headRef} className="dev break-all font-sohne-light text-white text-[74px] xl:tracking-tighter text-balance sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[1.15]">
+                                            Engineer
                                         </h1>
                                     </div>
                                 </div>
-                                <p className="font-sohne text-[11px] font-bold text-center xl:text-right xl:text-sm xl:mr-5">©2025 | AYAN CHAKRABORTY</p>
+                                <p className="font-sohne text-[11px] font-bold text-center xl:text-right xl:text-sm xl:mr-5">©2026 | AYAN CHAKRABORTY</p>
                             </div>
                         </div>
                     </div>
