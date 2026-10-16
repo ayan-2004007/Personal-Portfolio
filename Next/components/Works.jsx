@@ -106,7 +106,7 @@ const Works = () => {
                         <img src={arrow.src} alt="" className="h-[40px] w-[40px] md:h-[60px] md:w-[60px] lg:h-[80px] lg:w-[80px] xl:w-[100px] xl:h-[100px]" />
                     </div>
                     <div className="flex flex-col gap-2">
-                        <p className="uppercase px-3 font-sohne font-semibold text-[#121212] text-[10px] leading-[15px] max-w-[374px] mx-auto md:text-[12px] md:leading-[19px] md:max-w-[450px] lg:leading-[19px] lg:max-w-[524px] lg:mr-14 xl:mr-0 xl:px-0 xl:text-sm xl:leading-[20px] xl:max-w-[595px]">Here's a glimpse into what I've been building. From sleek frontends to powerful full stack apps, each project reflects my passion for problem-solving and clean design. Scroll down to see what I've been up to.
+                        <p className="uppercase px-3 font-sohne font-semibold text-[#121212] text-[10px] leading-[15px] max-w-[374px] mx-auto md:text-[12px] md:leading-[19px] md:max-w-[450px] lg:leading-[19px] lg:max-w-[524px] lg:mr-14 xl:mr-0 xl:px-0 xl:text-sm xl:leading-[20px] xl:max-w-[595px]">A focused selection of products I've built and led, from SaaS platforms trusted by real businesses to production video tooling and AI experiments. Fewer projects, deeper ownership. Scroll to explore.
                         </p>
                         <hr className="h-[1px] bg-[#121212] xl:hidden" />
                     </div>
@@ -123,7 +123,7 @@ const Works = () => {
                     See Project
                 </div>
 
-                <div ref={containerRef} className="flex gap-2 xl:gap-12">
+                <div ref={containerRef} className="flex gap-2 xl:gap-12 xl:px-12">
                     {projects.map((project) => (
                         <a
                             key={project.title}
@@ -133,9 +133,21 @@ const Works = () => {
                             aria-label={`${project.title} project`}
                             className="projects h-screen w-screen bg-white shrink-0 flex items-center justify-center xl:w-auto cursor-pointer"
                         >
-                            <div className={`flex ${project.reverse ? "flex-col-reverse" : "flex-col"} items-start gap-12`}>
-                                <img src={project.image.src} alt={`${project.title} project preview`} className="w-[380px] md:w-[524px] lg:w-[656px]" />
-                                <p className="font-sohne text-black text-sm px-5 max-w-[276px]  uppercase font-semibold md:leading-[19px] lg:leading-[22px]">{project.description}</p>
+                            <div className={`flex ${project.reverse ? "flex-col-reverse" : "flex-col"} items-start gap-8 lg:gap-10`}>
+                                <img src={project.image.src} alt={`${project.title} project preview`} className="w-[92vw] max-w-[380px] md:max-w-none md:w-[524px] lg:w-[656px]" />
+                                <div className="flex flex-col gap-4 w-[92vw] max-w-[380px] md:max-w-none md:w-[524px] lg:w-[656px]">
+                                    <div className="flex flex-col gap-1 border-b-2 border-[#121212] pb-2 md:flex-row md:items-baseline md:justify-between md:gap-4">
+                                        <h3 className="font-sohne text-black text-2xl uppercase font-bold tracking-tight lg:text-3xl">{project.title}</h3>
+                                        <p className="font-sohne text-[#121212] text-[10px] uppercase font-bold md:text-right md:text-[12px]">( {project.category} )</p>
+                                    </div>
+                                    <div className="flex flex-col gap-3 md:flex-row md:justify-between md:gap-8">
+                                        <p className="font-sohne text-black text-[12px] leading-[17px] uppercase font-semibold md:text-sm md:max-w-[300px] md:leading-[19px] lg:max-w-[340px] lg:leading-[22px]">{project.description}</p>
+                                        <div className="flex flex-col gap-2 md:max-w-[190px] lg:max-w-[230px]">
+                                            <p className="font-sohne text-[#737373] text-[10px] leading-[15px] uppercase font-bold md:text-[11px] md:leading-[16px]">{project.role}</p>
+                                            <p className="font-sohne text-[#121212] text-[10px] leading-[15px] uppercase font-bold md:text-[11px] md:leading-[16px]">{project.stack}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     ))}

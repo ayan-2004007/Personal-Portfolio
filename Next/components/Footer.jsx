@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
 
             <div className="flex w-full px-4 items-start md:px-8 xl:justify-center">
-                <p className="text-[12px] font-sohne uppercase  font-bold text-justify max-w-[306px] leading-[17px] md:text-sm md:max-w-[396px] md:leading-[19px] xl:text-base xl:leading-[21px] xl:max-w-[454px]">Thank you for visiting. I'm always evolving, exploring, and building. Feel free to reach out — let's create something meaningful together.</p>
+                <p className="text-[12px] font-sohne uppercase  font-bold text-justify max-w-[306px] leading-[17px] md:text-sm md:max-w-[396px] md:leading-[19px] xl:text-base xl:leading-[21px] xl:max-w-[454px]">Thank you for visiting. I'm always evolving, exploring, and building. Feel free to reach out and let's create something meaningful together.</p>
             </div>
 
             <div className="flex flex-col px-4 gap-2 md:px-8 xl:hidden">
