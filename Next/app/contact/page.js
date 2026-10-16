@@ -3,7 +3,7 @@ import { siteName, ogImage } from "@/data/site"
 
 const title = "Contact"
 const description =
-  "Have an idea or project in mind? Get in touch with Ayan Chakraborty, Software Engineer from Kolkata. Partnership starts with hello."
+  "Contact Ayan Chakraborty, software engineer and full stack developer in Kolkata. Email or message on LinkedIn about projects, jobs or working together."
 
 export const metadata = {
   title,

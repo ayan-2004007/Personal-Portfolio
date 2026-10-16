@@ -46,7 +46,7 @@ const ContactFull = () => {
                     <div className="hidden xl:flex flex-col gap-9 pr-20 -mt-50">
                         <div className="flex flex-col gap-6">
                             <img src={profile.src} alt="Ayan Chakraborty" className="h-20 w-20 rounded-full object-cover" />
-                            <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Have a product to build or a hard problem to solve? Let's talk. Email me or connect with me anytime.</p>
+                            <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Have a project in mind or a question? Send me an email or message me on LinkedIn.</p>
                         </div>
                         <div className="flex gap-4">
                             <div className="flex flex-col gap-2">
@@ -61,7 +61,7 @@ const ContactFull = () => {
 
                 <div className="flex gap-3 self-end px-4 sm:px-8 xl:hidden">
                     <img src={profile.src} alt="Ayan Chakraborty" className="h-20 w-20 rounded-full object-cover" />
-                    <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Have a product to build or a hard problem to solve? Let's talk. Email me or connect with me anytime.</p>
+                    <p className="text-xs text-[#717171] uppercase font-sohne-halbfett max-w-[216px] text-justify">Have a project in mind or a question? Send me an email or message me on LinkedIn.</p>
                 </div>
             </div>
         </main>

@@ -98,7 +98,7 @@ const Experience = () => {
                 </div>
                 <div className="flex flex-col gap-2 xl:items-end xl:pr-5">
                     <p className="uppercase px-3 font-sohne font-semibold text-[#121212] text-[10px] leading-[15px] max-w-[374px] mx-auto md:text-[12px] md:leading-[19px] md:max-w-[450px] lg:max-w-[524px] xl:mx-0 xl:px-0 xl:text-sm xl:leading-[20px] xl:max-w-[595px]">
-                        What I've owned, built and led in the industry. From product planning and system architecture to frontend engineering and team leadership, on platforms that real businesses use every day.
+                        Where I work and what I actually do there.
                     </p>
                     <hr className="h-[1px] bg-[#121212] xl:hidden" />
                 </div>
@@ -124,11 +124,11 @@ const Experience = () => {
                             <div className="flex items-start gap-5 lg:gap-10 xl:w-[44%]">
                                 <p className="font-sohne text-[#d6d6d6] text-6xl font-extrabold leading-none md:text-7xl lg:text-8xl xl:text-9xl">{item.number}</p>
                                 <div className="flex flex-col gap-2 pt-1 lg:pt-3">
-                                    {item.link ? (
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-fit font-sohne font-bold uppercase tracking-tight text-[#121212] text-2xl md:text-3xl lg:text-4xl hover:opacity-60 duration-300">{item.product}</a>
-                                    ) : (
-                                        <h3 className="font-sohne font-bold uppercase tracking-tight text-[#121212] text-2xl md:text-3xl lg:text-4xl">{item.product}</h3>
-                                    )}
+                                    <h3 className="font-sohne font-bold uppercase tracking-tight text-[#121212] text-2xl md:text-3xl lg:text-4xl">
+                                        {item.link ? (
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:opacity-60 duration-300">{item.product}</a>
+                                        ) : item.product}
+                                    </h3>
                                     <p className="font-sohne font-bold uppercase text-[#121212] text-[11px] md:text-sm">( {item.role} )</p>
                                     <p className="font-sohne font-bold uppercase text-[#737373] text-[11px] md:text-sm">{item.period}</p>
                                 </div>

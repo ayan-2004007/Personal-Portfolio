@@ -2,10 +2,10 @@ export const siteUrl = "https://ayanhere.netlify.app"
 
 export const siteName = "Ayan Chakraborty"
 
-export const siteTitle = "Ayan Chakraborty | Software Engineer"
+export const siteTitle = "Ayan Chakraborty | Software Engineer & Full Stack Developer"
 
 export const siteDescription =
-  "Ayan Chakraborty is a Software Engineer from Kolkata building scalable SaaS platforms, from system architecture and business logic to polished, high-performance interfaces. Currently leading development of Sitely at Cognivaa."
+  "Ayan Chakraborty is a software engineer and full stack developer in Kolkata, India, building SaaS products like Sitely and PlayPause with Next.js, Node.js and MongoDB."
 
 export const email = "ayanchakraborty2004@gmail.com"
 
@@ -17,22 +17,18 @@ export const socials = {
 
 export const keywords = [
   "Ayan Chakraborty",
-  "Ayan Chakraborty Developer",
-  "Ayan Chakraborty Portfolio",
-  "Software Engineer",
+  "Ayan Chakraborty software engineer",
+  "Ayan Chakraborty developer",
+  "Ayan Chakraborty portfolio",
+  "Ayan Chakraborty Kolkata",
+  "Ayan Chakraborty Cognivaa",
   "Software Engineer Kolkata",
-  "Full Stack Developer",
   "Full Stack Developer Kolkata",
+  "Next.js Developer Kolkata",
   "MERN Stack Developer",
-  "React Developer",
-  "Next.js Developer",
-  "SaaS Developer",
-  "Node.js Developer",
-  "Frontend Developer",
-  "UI/UX Designer",
-  "Web Developer India",
-  "GSAP Animations",
-  "Portfolio",
+  "SaaS Developer India",
+  "Sitely construction management software",
+  "PlayPause video collaboration",
 ]
 
 export const ogImage = {

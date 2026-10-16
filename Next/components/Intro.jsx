@@ -187,14 +187,14 @@ const Intro = () => {
 
                         <div className="relative flex flex-col text-[#FFF4F4] gap-6">
                             <p ref={paraRef} className="font-sohne-light uppercase text-2xl z-10 relative max-w-[490px] md:left-[20%] md:top-10 md:text-3xl md:max-w-[576px] lg:text-4xl lg:left-[30%] lg:max-w-[650px] xl:left-[40%] xl:text-[44px] xl:max-w-[790px] xl:top-16 2xl:text-5xl 2xl:leading-[53px] 2xl:left-[54%] 2xl:top-20">
-                                Software engineer building SaaS products that real businesses run on.
+                                I build software that real businesses use every day.
                             </p>
 
                             <div className="relative w-full max-h-[426px] object-cover sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] overflow-hidden md:overflow-x-clip lg:left-10 xl:left-6">
-                                <img ref={profileRef} src={profile.src} alt="Ayan Chakraborty, Software Engineer" className="relative w-full opacity-90 max-h-[426px] object-cover object-[50%_18%] sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] lg:left-10 xl:left-6" />
+                                <img ref={profileRef} src={profile.src} loading="lazy" decoding="async" alt="Ayan Chakraborty, Software Engineer" className="relative w-full opacity-90 max-h-[426px] object-cover object-[50%_18%] sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] lg:left-10 xl:left-6" />
                             </div>
 
-                            <p className="font-sohne font-extrabold text-[11px] uppercase leading-[17px] text-justify max-w-[min(298px,calc(100vw-56px))] relative z-10 left-10 bottom-28 md:text-[12px] lg:text-sm lg:max-w-[424px] lg:leading-[21px] xl:left-[218px] 2xl:text-base 2xl:leading-[25px] 2xl:bottom-36">I'm Ayan Chakraborty, a Software Engineer at Cognivaa and a Computer Science graduate. I work across the full product lifecycle, from Figma designs to backend architecture and business logic. I've built SaaS tools for video teams and construction firms where speed, reliability and UX matter as much as shipping. I own technical decisions and lead teams that turn complex requirements into software people use.</p>
+                            <p className="font-sohne font-extrabold text-[11px] uppercase leading-[17px] text-justify max-w-[min(298px,calc(100vw-56px))] relative z-10 left-10 bottom-28 md:text-[12px] lg:text-sm lg:max-w-[424px] lg:leading-[21px] xl:left-[218px] 2xl:text-base 2xl:leading-[25px] 2xl:bottom-36">I'm Ayan Chakraborty, a software engineer at Cognivaa and a Computer Science graduate from Kolkata. I design screens in Figma and build both the frontend and the backend. Right now I lead the team building Sitely, a tool used by 162+ construction companies. Before that I led the frontend of PlayPause, a video review platform.</p>
                         </div>
                     </div>
 

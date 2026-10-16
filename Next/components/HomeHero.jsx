@@ -60,8 +60,7 @@ const HomeHero = () => {
             <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">
                 <div className="overflow-hidden">
                     <p ref={textRef} className="my-2 font-sohne text-[#121212] text-[12px] leading-[17px] font-semibold lg:text-sm uppercase lg:font-bold max-w-[586px] lg:leading-[19px] 2xl:leading-[22px]">
-                        I'm Ayan Chakraborty, a Full Stack Developer building scalable SaaS platforms, complex business systems and high-performance web apps, from system architecture and business logic to polished, intuitive user experiences.
-                    </p>
+                        I'm Ayan Chakraborty, a full stack developer from Kolkata. I build SaaS products for real businesses, from the database and backend logic to the screens people use every day.</p>
                 </div>
                 <p className="font-sohne text-[#121212] text-2xl uppercase font-bold max-w-[586px] leading-[25px]">(01)</p>
             </div>
@@ -89,7 +88,7 @@ const HomeHero = () => {
                                     </div>
                                     <div className="overflow-hidden 2xl:pb-12 2xl:-mb-12">
                                         <h1 ref={headRef} className="dev break-all font-sohne-light text-white text-[74px] xl:tracking-tighter text-balance sm:text-[120px] md:text-[144px] lg:text-[176px] xl:text-[208px] 2xl:text-[276px] 2xl:leading-[1.15]">
-                                            Engineer
+                                            <span className="sr-only">Ayan Chakraborty, Full Stack Software </span>Engineer
                                         </h1>
                                     </div>
                                 </div>
