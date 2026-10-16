@@ -60,7 +60,7 @@ const HomeHero = () => {
             <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">
                 <div className="overflow-hidden">
                     <p ref={textRef} className="my-2 font-sohne text-[#121212] text-[12px] leading-[17px] font-semibold lg:text-sm uppercase lg:font-bold max-w-[586px] lg:leading-[19px] 2xl:leading-[22px]">
-                        I'm Ayan Chakraborty, a full stack developer from Kolkata. I build SaaS products for real businesses, from the database and backend logic to the screens people use every day.</p>
+                        I'm Ayan Chakraborty, a full stack developer from Kolkata. I build web apps, websites and SaaS products for real businesses, from the backend and database to the screens people use every day.</p>
                 </div>
                 <p className="font-sohne text-[#121212] text-2xl uppercase font-bold max-w-[586px] leading-[25px]">(01)</p>
             </div>
@@ -72,10 +72,10 @@ const HomeHero = () => {
                     <div className="relative z-10 w-full">
                         <div className="flex flex-col gap-10 h-[508px] justify-between pt-9 pb-2 lg:h-[530px] 2xl:h-[580px]">
                             <div className="flex flex-col items-start px-6 gap-6 lg:flex-row justify-end">
-                                <div ref={roleRef} className="flex flex-wrap gap-1 text-white text-base">
-                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">SaaS Products</div>
-                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">System Architecture</div>
-                                    <div className="font-sohne px-2 py-1 border-2 border-white rounded-[30px] font-bold lg:text-lg xl:text-xl">Tech Lead</div>
+                                <div ref={roleRef} className="flex flex-wrap gap-2">
+                                    <div className="font-sohne px-3 py-1 border-[1.5px] border-black rounded-[30px] font-bold uppercase text-black text-[10px] md:text-xs xl:text-sm xl:px-4 xl:py-[6px]">SaaS Products</div>
+                                    <div className="font-sohne px-3 py-1 border-[1.5px] border-black rounded-[30px] font-bold uppercase text-black text-[10px] md:text-xs xl:text-sm xl:px-4 xl:py-[6px]">System Architecture</div>
+                                    <div className="font-sohne px-3 py-1 border-[1.5px] border-black rounded-[30px] font-bold uppercase text-black text-[10px] md:text-xs xl:text-sm xl:px-4 xl:py-[6px]">Tech Lead</div>
                                 </div>
                             </div>
                             <div className="flex flex-col text-white w-full gap-8 xl:gap-0">

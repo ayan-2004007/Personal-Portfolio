@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Preloader from "./Preloader"
 import HomeHero from "./HomeHero"
 import Works from "./Works"
-import Experience from "./Experience"
 import Intro from "./Intro"
 import Transition from "./Transition"
 import Footer from "./Footer"
@@ -58,6 +57,35 @@ const Home = () => {
         }
     }, [])
 
+    // ScrollTrigger measures positions once. Re-measure whenever the page height
+    // changes (late images, fonts, pin spacers) and keep triggers in page order,
+    // otherwise animations further down fire at the wrong scroll position
+    // (most visible after navigating back from /contact).
+    useEffect(() => {
+        if (loading) return
+        const content = document.querySelector(".site-content")
+        if (!content) return
+        const refresh = () => {
+            ScrollTrigger.sort?.()
+            ScrollTrigger.refresh()
+        }
+        let timer
+        const scheduleRefresh = () => {
+            clearTimeout(timer)
+            timer = setTimeout(refresh, 200)
+        }
+        const observer = new ResizeObserver(scheduleRefresh)
+        observer.observe(content)
+        document.fonts?.ready.then(scheduleRefresh)
+        window.addEventListener("load", scheduleRefresh)
+        scheduleRefresh()
+        return () => {
+            clearTimeout(timer)
+            observer.disconnect()
+            window.removeEventListener("load", scheduleRefresh)
+        }
+    }, [loading])
+
     return (
         <>
             {loading ? (
@@ -76,7 +104,6 @@ const Home = () => {
                             <HomeHero />
                         </div>
                         <Works />
-                        <Experience />
                         <div>
                             <Intro />
                             <Transition />

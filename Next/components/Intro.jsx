@@ -8,6 +8,7 @@ import arrow from "@/assets/direction.png"
 import profile from "@/assets/me-portrait.jpg"
 import grain from "@/assets/grain.gif"
 import Expertise from "./Expertise"
+import Experience from "./Experience"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -172,7 +173,7 @@ const Intro = () => {
                                     <h2 ref={headRef02} className="font-sohne text-[72px] text-white font-medium uppercase tracking-tight px-2 sm:text-[104px] md:font-bold lg:px-6 lg:tracking-normal xl:text-[144px] 2xl:text-[172px]">ayan</h2>
                                 </div>
                                 <p className="font-sohne text-[#e6e6e6] text-lg xl:text-2xl uppercase font-bold max-w-[586px] leading-[25px]">
-                                    (04)
+                                    (03)
                                 </p>
                             </div>
                         </div>
@@ -191,12 +192,14 @@ const Intro = () => {
                             </p>
 
                             <div className="relative w-full max-h-[426px] object-cover sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] overflow-hidden md:overflow-x-clip lg:left-10 xl:left-6">
-                                <img ref={profileRef} src={profile.src} loading="lazy" decoding="async" alt="Ayan Chakraborty, Software Engineer" className="relative w-full opacity-90 max-h-[426px] object-cover object-[50%_18%] sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] lg:left-10 xl:left-6" />
+                                <img ref={profileRef} src={profile.src} width={profile.width} height={profile.height} loading="lazy" decoding="async" alt="Ayan Chakraborty, Software Engineer" className="relative w-full opacity-90 max-h-[426px] object-cover object-[50%_18%] sm:max-h-[524px] md:max-w-[676px] lg:max-w-[974px] lg:max-h-[656px] xl:max-w-[1196px] xl:max-h-[774px] 2xl:max-w-[1276px] lg:left-10 xl:left-6" />
                             </div>
 
-                            <p className="font-sohne font-extrabold text-[11px] uppercase leading-[17px] text-justify max-w-[min(298px,calc(100vw-56px))] relative z-10 left-10 bottom-28 md:text-[12px] lg:text-sm lg:max-w-[424px] lg:leading-[21px] xl:left-[218px] 2xl:text-base 2xl:leading-[25px] 2xl:bottom-36">I'm Ayan Chakraborty, a software engineer at Cognivaa and a Computer Science graduate from Kolkata. I design screens in Figma and build both the frontend and the backend. Right now I lead the team building Sitely, a tool used by 162+ construction companies. Before that I led the frontend of PlayPause, a video review platform.</p>
+                            <p className="font-sohne font-extrabold text-[11px] uppercase leading-[17px] text-justify max-w-[min(298px,calc(100vw-56px))] relative z-10 left-10 bottom-28 md:text-[12px] lg:text-sm lg:max-w-[424px] lg:leading-[21px] xl:left-[218px] 2xl:text-base 2xl:leading-[25px] 2xl:bottom-36">I'm Ayan Chakraborty, a software engineer from Kolkata with a degree in Computer Science. I started building for the web in college and now do it full time. I work across the whole stack: I design in Figma, build the frontend, write the backend and plan how it all fits together. I care about clean code, simple design and software that actually helps people.</p>
                         </div>
                     </div>
+
+                    <Experience />
 
                     <div>
                         <Expertise />

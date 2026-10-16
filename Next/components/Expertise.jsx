@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 const Expertise = () => {
     const containerRef = useRef(null)
     const hrRefs = useRef([])
+    const headRef = useRef(null)
     const [isReady, setIsReady] = useState(false)
 
     useEffect(() => {
@@ -26,6 +27,18 @@ const Expertise = () => {
     useGSAP(() => {
         if (!isReady) return
         containerRef.current.offsetHeight
+        if (headRef.current) {
+            gsap.from(headRef.current, {
+                duration: 2,
+                y: "100%",
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: headRef.current,
+                    start: "top 80%",
+                    toggleActions: "play none play reverse",
+                },
+            })
+        }
         hrRefs.current.forEach((hrRef) => {
             if (hrRef) {
                 gsap.fromTo(hrRef,
@@ -51,7 +64,16 @@ const Expertise = () => {
     }, { dependencies: [isReady], scope: containerRef })
 
     return (
-        <div ref={containerRef} className="w-full flex flex-col gap-16 pb-10">
+        <section ref={containerRef} id="skills" aria-label="Skills" className="w-full flex flex-col gap-16 pb-10">
+            <div className="flex items-baseline px-3 xl:px-5">
+                <div className="flex items-start">
+                    <div className="overflow-hidden">
+                        <h2 ref={headRef} className="font-sohne text-white text-[32px] min-[360px]:text-[40px] sm:text-[64px] md:text-[84px] lg:text-[112px] xl:text-[144px] 2xl:text-[172px] font-bold uppercase tracking-tight">Skills</h2>
+                    </div>
+                    <p className="font-sohne text-[#e6e6e6] text-base xl:text-2xl uppercase font-bold">(05)</p>
+                </div>
+                <img src={arrow.src} alt="" className="invert h-[28px] w-[28px] sm:h-[40px] sm:w-[40px] md:h-[60px] md:w-[60px] lg:h-[80px] lg:w-[80px] xl:w-[100px] xl:h-[100px]" />
+            </div>
             {expertise.map((item, index) => (
                 <div key={item.number} className="flex flex-col gap-3 xl:gap-12">
                     <hr
@@ -79,7 +101,7 @@ const Expertise = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     )
 }
 

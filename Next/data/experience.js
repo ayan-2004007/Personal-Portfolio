@@ -1,7 +1,15 @@
+import cognivaaLogo from "@/assets/cognivaa.avif"
+
 export const employer = {
   company: "Cognivaa",
   title: "Software Engineer",
   period: "Aug 2025 - Present",
+  logo: cognivaaLogo,
+  stats: [
+    { value: "1+", label: "Years in the industry" },
+    { value: "2", label: "Products led" },
+    { value: "162+", label: "Companies on Sitely" },
+  ],
 }
 
 export const experience = [
@@ -32,7 +40,7 @@ export const experience = [
     summary:
       "I led the frontend of PlayPause, a live video review tool that creative teams use to share videos, give feedback and approve final cuts.",
     contributions: [
-      "Built and owned the whole frontend with Next.js and Tailwind CSS.",
+      "Built the whole frontend with Next.js and Tailwind CSS.",
       "Made the review screens: comments on exact frames, comparing versions and approvals.",
       "Built large video uploads and smooth streaming using Cloudflare CDN.",
       "Kept the app fast by finding and fixing performance problems.",

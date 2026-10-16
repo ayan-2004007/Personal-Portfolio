@@ -3,28 +3,28 @@ export const expertise = [
     number: "01",
     title: "frontend",
     description:
-      "Websites and web apps that load fast, work on every screen size and feel smooth to use.",
-    skills: ["JavaScript", "React", "Next.js", "Tailwind CSS", "GSAP", "Responsive UI", "Performance"],
+      "Modern, responsive web apps with clean UI and smooth animations. From components and state to performance and accessibility.",
+    skills: ["HTML & CSS", "JavaScript", "React", "Next.js", "Tailwind CSS", "GSAP", "Responsive UI", "Performance"],
   },
   {
     number: "02",
     title: "backend & APIs",
     description:
-      "APIs and server logic that keep data safe and the app running, including login and user roles.",
-    skills: ["Node.js", "Express", "REST APIs", "Business Logic", "Keycloak", "Auth & Roles"],
+      "Server-side apps and APIs built from the ground up. Routing, business logic, security, integrations and everything that runs behind the scenes.",
+    skills: ["Node.js", "Express", "REST APIs", "Business Logic", "Authentication", "Integrations"],
   },
   {
     number: "03",
     title: "data & systems",
     description:
-      "Planning how data is stored and how the parts of a system fit together. Mostly MongoDB, and I have also worked with PostgreSQL, Cloudflare and AWS.",
-    skills: ["MongoDB", "Data Modeling", "System Architecture", "Scalability"],
+      "Databases and system design that stay fast and reliable as a product grows. From data modeling and queries to how services connect.",
+    skills: ["MongoDB", "SQL", "Data Modeling", "System Architecture", "Scalability"],
   },
   {
     number: "04",
     title: "product & design",
     description:
-      "Turning an idea into a working product: planning features, designing screens in Figma and leading the team that builds it.",
+      "Taking an idea from a rough sketch to a finished product. UI/UX design, feature planning, teamwork and shipping on time.",
     skills: ["SaaS", "UI/UX", "Figma", "Enterprise Workflows", "Product Planning", "Tech Leadership"],
   },
 ]
