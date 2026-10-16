@@ -54,7 +54,7 @@ const HomeHero = () => {
     }, [])
 
     return (
-        <header className="flex flex-col w-full h-screen justify-around gap-2 xl:gap-0 sm:justify-between lg:pb-4">
+        <header className="flex flex-col w-full min-h-screen justify-around gap-2 xl:gap-0 sm:justify-between lg:pb-4">
             <Cursor />
             <NewNavbar />
             <div className="flex w-full items-start gap-1 lg:gap-2 justify-center px-4">

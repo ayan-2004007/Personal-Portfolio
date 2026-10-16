@@ -11,7 +11,7 @@ export const projects = [
     image: sitely,
     reverse: false,
     description:
-      "End-to-end construction management platform for B2B teams, covering organisation, projects, procurement and finance in one tool. Used by 162+ companies since its July 2026 launch.",
+      "End-to-end construction management platform for B2B teams, covering organisation, projects, procurement and finance in one tool. 162+ companies onboarded since its July 2026 launch.",
     role: "Product & engineering lead: UI/UX, architecture, full stack",
     stack: "Next.js · Express · MongoDB · Keycloak",
   },

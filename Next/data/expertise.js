@@ -1,32 +1,30 @@
 export const expertise = [
   {
     number: "01",
-    title: "ui/ux",
+    title: "frontend",
     description:
-      "Designing clean, intuitive, and responsive interfaces with a focus on user flow, interaction, and accessibility.",
+      "Fast, responsive interfaces for complex products, built with modern React tooling and tuned for real-world performance.",
+    skills: ["JavaScript", "React", "Next.js", "Tailwind CSS", "GSAP", "Responsive UI", "Performance"],
   },
   {
     number: "02",
-    title: "frontend",
+    title: "backend & APIs",
     description:
-      "Building pixel-perfect, responsive web apps using React, Tailwind, and GSAP with smooth animations and dynamic behavior.",
+      "Secure, scalable APIs and the business logic behind them, from data flow and integrations to authentication and access control.",
+    skills: ["Node.js", "Express", "REST APIs", "Business Logic", "Keycloak", "Auth & Roles"],
   },
   {
     number: "03",
-    title: "backend",
+    title: "data & systems",
     description:
-      "Creating scalable and secure APIs using Node.js, Express, and Flask, with database integration and server-side logic.",
+      "Data models and system architecture built to scale. Hands-on with MongoDB, with working exposure to PostgreSQL, Cloudflare CDN and AWS.",
+    skills: ["MongoDB", "Data Modeling", "System Architecture", "Scalability"],
   },
   {
     number: "04",
-    title: "AI/ML",
+    title: "product & design",
     description:
-      "Currently exploring AI/ML to integrate intelligent features into modern web apps using Python and LLM technologies.",
-  },
-  {
-    number: "05",
-    title: "Databases",
-    description:
-      "Experienced in managing SQL and NoSQL databases including MongoDB Atlas, MySQL, and PostgreSQL for scalable, real-world web applications.",
+      "Taking products from idea to launch: planning, UI/UX in Figma, enterprise workflows and leading the team that ships them.",
+    skills: ["SaaS", "UI/UX", "Figma", "Enterprise Workflows", "Product Planning", "Tech Leadership"],
   },
 ]

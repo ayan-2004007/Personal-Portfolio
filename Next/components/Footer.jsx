@@ -14,17 +14,17 @@ const Footer = () => {
     }
 
     return (
-        <footer className="h-[90vh] pb-10 w-full bg-white flex flex-col justify-between sm:h-screen sm:py-4 xl:justify-around xl:pb-0 2xl:py-0">
+        <footer className="min-h-[90vh] pb-10 w-full bg-white flex flex-col justify-between gap-10 sm:min-h-screen sm:py-4 xl:justify-around xl:pb-0 2xl:py-0">
 
             <div className="flex w-full items-start justify-between xl:px-6 2xl:px-14">
                 <div className="w-full flex flex-col gap-2 items-end px-4 md:px-8 xl:w-fit xl:items-start">
-                    <div className="w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in">{email}</div>
+                    <a href={`mailto:${email}`} className="block w-fit text-[13px] min-[360px]:text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">{email}</a>
                     <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="block w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">linkedIn</a>
                     <a href={socials.github} target="_blank" rel="noopener noreferrer" className="block w-fit text-base font-sohne font-bold px-3 py-2 border-2 border-[#121212] lg:text-lg 2xl:text-xl hover:bg-[#121212] hover:text-white duration-300 ease-in cursor-pointer">Github</a>
                 </div>
                 <div className="xl:flex flex-col px-4 gap-2 md:px-8 hidden ">
                     <div className="flex flex-col">
-                        <p className="text-sm font-sohne uppercase font-black">kolkata</p>
+                        <p className="text-sm font-sohne uppercase font-black">software engineer · kolkata</p>
                         <p className="text-sm font-sohne uppercase font-black">2026 | ayan chakraborty</p>
                     </div>
                     <div className="flex flex-wrap gap-3">
@@ -44,12 +44,12 @@ const Footer = () => {
             </div>
 
             <div className="flex w-full px-4 items-start md:px-8 xl:justify-center">
-                <p className="text-[12px] font-sohne uppercase  font-bold text-justify max-w-[306px] leading-[17px] md:text-sm md:max-w-[396px] md:leading-[19px] xl:text-base xl:leading-[21px] xl:max-w-[454px]">Thank you for visiting. I'm always evolving, exploring, and building. Feel free to reach out and let's create something meaningful together.</p>
+                <p className="text-[12px] font-sohne uppercase  font-bold text-justify max-w-[306px] leading-[17px] md:text-sm md:max-w-[396px] md:leading-[19px] xl:text-base xl:leading-[21px] xl:max-w-[454px]">Thanks for visiting. Have a product in mind or a hard problem to solve? Reach out and let's build something useful together.</p>
             </div>
 
             <div className="flex flex-col px-4 gap-2 md:px-8 xl:hidden">
                 <div className="flex flex-col">
-                    <p className="text-sm font-sohne uppercase font-black">kolkata</p>
+                    <p className="text-sm font-sohne uppercase font-black">software engineer · kolkata</p>
                     <p className="text-sm font-sohne uppercase font-black">2026 | ayan chakraborty</p>
                 </div>
                 <div className="flex flex-wrap gap-3">

@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Preloader from "./Preloader"
 import HomeHero from "./HomeHero"
 import Works from "./Works"
+import Experience from "./Experience"
 import Intro from "./Intro"
 import Transition from "./Transition"
 import Footer from "./Footer"
@@ -75,6 +76,7 @@ const Home = () => {
                             <HomeHero />
                         </div>
                         <Works />
+                        <Experience />
                         <div>
                             <Intro />
                             <Transition />
