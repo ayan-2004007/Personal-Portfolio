@@ -1,4 +1,5 @@
-export const siteUrl = "https://ayanhere.netlify.app"
+// export const siteUrl = "https://ayanhere.netlify.app"
+export const siteUrl = "https://ayandev.site"
 
 export const siteName = "Ayan Chakraborty"
 
