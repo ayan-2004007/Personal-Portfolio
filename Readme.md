@@ -2,8 +2,9 @@
 
 Source code for my personal developer portfolio. Built with `Next.js` (static export), `React`, `Tailwind CSS`, `GSAP`, `Framer Motion` and `Lenis`. It covers my background, experience, expertise, featured projects with live previews, and contact details, in a clean, responsive design with smooth animations and page transitions.
 
-> 🔗 **Live Site:** [ayanhere.netlify.app](https://ayanhere.netlify.app)
+<!-- > 🔗 **Live Site:** [ayanhere.netlify.app](https://ayanhere.netlify.app) -->
 
+> 🔗 **Live Site:** [ayandev.site](https://ayandev.site)
 <hr>
 
 ## Tech Stack
