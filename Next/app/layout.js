@@ -46,9 +46,9 @@ export const metadata = {
     images: [ogImage.url],
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/apple-icon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   formatDetection: {
     email: false,
