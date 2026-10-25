@@ -46,9 +46,12 @@ export const metadata = {
     images: [ogImage.url],
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon-48.png",
+    apple: "/apple-icon.png",
   },
   formatDetection: {
     email: false,
@@ -109,6 +112,10 @@ const jsonLd = {
       url: siteUrl,
       name: siteTitle,
       inLanguage: "en",
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/ayan-chakraborty.jpg`,
+      },
       mainEntity: { "@id": `${siteUrl}/#person` },
       isPartOf: { "@id": `${siteUrl}/#website` },
     },
